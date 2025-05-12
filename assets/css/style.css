@@ -1811,6 +1811,13 @@ address {
     max-height: 25px;
     max-width: unset;
   }
+  .header .btn {
+    --fs-5: 10px;
+    --padding: 6px 20px;
+    margin: 2px;
+    padding: 2px;
+  }
+
   .social-link {
     color: var(--white);
     padding: 8px;
@@ -1818,7 +1825,7 @@ address {
     border-radius: 50%;
     font-size: 15px;
     transition: var(--transition);
-    overflow: visible; /****************************aquiiiiiiiiiiiiii***************************/
+    display: none; /****************************aquiiiiiiiiiiiiii***************************/
   }
   .carousel .list .item .content {
     top: 15%;
@@ -1829,15 +1836,22 @@ address {
 
   .carousel .list .item .author {
     font-size: var(--fs-5);
-    letter-spacing: 5px;
+    letter-spacing: 0px;
   }
 
   .carousel .list .item .title,
   .carousel .list .item .topic {
     font-size: 1em; /* Antes 3.5em */
     line-height: 1.2em;
+    letter-spacing: 0px;
   }
-
+  .carousel .list .item .des {
+    font-size: 0.9em; /* Ajusta según el tamaño que necesites */
+    line-height: 1.2; /* Ajusta la altura de línea para que el texto esté más compacto */
+    letter-spacing: -0.05em; /* Reduce el espaciado entre las letras (hazlo más negativo para pegar aún más las letras) */
+    margin: 0; /* Elimina cualquier margen alrededor del texto */
+    padding: 0;
+  }
   .carousel .list .item .buttons {
     grid-template-columns: repeat(2, 100px);
     grid-template-rows: 35px;
@@ -1846,7 +1860,7 @@ address {
 
   .carousel .list .item .buttons button {
     width: 70px;
-    font-size: var(--fs-4-1);
+    font-size: 8px;
     letter-spacing: 2px;
     margin: 0 0;
   }
@@ -1857,16 +1871,18 @@ address {
   }
 
   .thumbnail .item {
-    width: 70px;
-    height: 100px;
+    width: 90px;
+    height: 120px;
   }
 
   .thumbnail .item .content .title {
-    font-size: var(--fs-6);
+    font-size: 10px;
+    text-align: center;
   }
 
   .thumbnail .item .content .description {
-    font-size: var(--fs-7);
+    font-size: 10px;
+    text-align: center;
   }
 
   .arrows {
