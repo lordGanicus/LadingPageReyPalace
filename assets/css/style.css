@@ -1338,7 +1338,9 @@ address {
   /**
    * REUSED STYLE
    */
-
+  .menu-info {
+    width: 500px;
+  }
   .container {
     max-width: 580px;
     margin-inline: auto;
@@ -1488,6 +1490,10 @@ address {
    * REUSED STYLE
    */
 
+  .menu-frame {
+    flex: 1 1 100px;
+    text-align: center;
+  }
   .container {
     max-width: 800px;
   }
@@ -1634,7 +1640,10 @@ address {
   /**
    * REUSED STYLE
    */
-
+  /*.menu-frame {
+    flex: 1 1 400px;
+    text-align: center;
+  }*/
   .container {
     max-width: 1050px;
   }
@@ -1711,15 +1720,6 @@ address {
   .overlay {
     display: none;
   }
-
-  /**
-   * HERO
-   */
-
-  /*********************************************************/
-  /**
-   * TOUR SEARCH
-   */
 
   .tour-search-form {
     grid-template-columns: repeat(5, 1fr);
@@ -1808,14 +1808,12 @@ address {
 }
 @media (max-width: 768px) {
   .header-top .logo img {
-    max-height: 25px;
+    max-height: 35px;
     max-width: unset;
   }
   .header .btn {
-    --fs-5: 10px;
-    --padding: 6px 20px;
+    --fs-5: 12px;
     margin: 2px;
-    padding: 2px;
   }
 
   .social-link {
@@ -1825,7 +1823,7 @@ address {
     border-radius: 50%;
     font-size: 15px;
     transition: var(--transition);
-    display: none; /****************************aquiiiiiiiiiiiiii***************************/
+    display: none;
   }
   .carousel .list .item .content {
     top: 15%;
@@ -1841,14 +1839,14 @@ address {
 
   .carousel .list .item .title,
   .carousel .list .item .topic {
-    font-size: 1em; /* Antes 3.5em */
-    line-height: 1.2em;
+    font-size: 1.5em; /* Antes 3.5em */
+    line-height: 1em;
     letter-spacing: 0px;
   }
   .carousel .list .item .des {
-    font-size: 0.9em; /* Ajusta según el tamaño que necesites */
-    line-height: 1.2; /* Ajusta la altura de línea para que el texto esté más compacto */
-    letter-spacing: -0.05em; /* Reduce el espaciado entre las letras (hazlo más negativo para pegar aún más las letras) */
+    font-size: 1em; /* Ajusta según el tamaño que necesites */
+    line-height: 1; /* Ajusta la altura de línea para que el texto esté más compacto */
+    /* Reduce el espaciado entre las letras (hazlo más negativo para pegar aún más las letras) */
     margin: 0; /* Elimina cualquier margen alrededor del texto */
     padding: 0;
   }
@@ -1859,8 +1857,8 @@ address {
   }
 
   .carousel .list .item .buttons button {
-    width: 70px;
-    font-size: 8px;
+    width: 80px;
+    font-size: 12px;
     letter-spacing: 2px;
     margin: 0 0;
   }
@@ -1871,17 +1869,17 @@ address {
   }
 
   .thumbnail .item {
-    width: 90px;
-    height: 120px;
+    width: 110px;
+    height: 150px;
   }
 
   .thumbnail .item .content .title {
-    font-size: 10px;
+    font-size: 13px;
     text-align: center;
   }
 
   .thumbnail .item .content .description {
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
   }
 
