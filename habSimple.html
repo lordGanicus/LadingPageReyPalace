@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Rey Palace</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.jpg"
+      type="image/jpg+xml"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <body id="top">
+    <!-- 
+      - #HEADER
+    -->
+    <header class="header" id="header" data-header>
+      <div class="overlay" data-overlay></div>
+
+      <div id="headerTop"></div>
+      <div id="headerBottom"></div>
+    </header>
+
+    <main>
+      <article>
+        <div class="container">
+          <h2 class="h2 section-title">Habitación Simple</h2>
+
+          <!-- Slider principal -->
+          <div class="slider-container">
+            <div class="main-slider" id="mainSlider">
+              <div class="main-slide active">
+                <img
+                  src="assets/images/habSimple/ReyPalacePics-01.jpg"
+                  alt="Habitación Ejecutiva"
+                />
+              </div>
+              <div class="main-slide">
+                <img
+                  src="assets/images/habSimple/ReyPalacePics-02.jpg"
+                  alt="Vista desde la habitación"
+                />
+              </div>
+              <div class="main-slide">
+                <img
+                  src="assets/images/habSimple/ReyPalacePics-01.jpg"
+                  alt="Baño ejecutivo"
+                />
+              </div>
+              <div class="main-slide">
+                <img
+                  src="assets/images/habSimple/ReyPalacePics-02.jpg"
+                  alt="Vista desde la habitación"
+                />
+              </div>
+              <div class="main-slide">
+                <img
+                  src="assets/images/habSimple/ReyPalacePics-01.jpg"
+                  alt="Detalle de decoración"
+                />
+              </div>
+            </div>
+
+            <div class="slider-controls">
+              <button class="slider-btn" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="slider-btn" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mini slider -->
+          <div class="mini-slider-container">
+            <div class="mini-slider" id="miniSlider">
+              <div class="mini-slide active" data-index="0">
+                <img
+                  src="assets/images/habSimple/ReyPalacePics-01.jpg"
+                  alt="Habitación Ejecutiva"
+                />
+              </div>
+              <div class="mini-slide" data-index="1">
+                <img
+                  src="assets/images/habSimple/ReyPalacePics-02.jpg"
+                  alt="Área de trabajo"
+                />
+              </div>
+              <div class="mini-slide" data-index="2">
+                <img
+                  src="assets/images/habSimple/ReyPalacePics-01.jpg"
+                  alt="Baño ejecutivo"
+                />
+              </div>
+              <div class="mini-slide" data-index="3">
+                <img
+                  src="assets/images/habSimple/ReyPalacePics-02.jpg"
+                  alt="Vista desde la habitación"
+                />
+              </div>
+              <div class="mini-slide" data-index="4">
+                <img
+                  src="assets/images/habSimple/ReyPalacePics-01.jpg"
+                  alt="Detalle de decoración"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Amenidades -->
+          <div class="amenidades-section">
+            <h2 class="section-title">Amenidades</h2>
+            <div class="amenidades-grid">
+              <div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon">
+                    <i class="fas fa-snowflake"></i>
+                  </div>
+                  <div class="amenidad-text available">Aire acondicionado</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-fire"></i></div>
+                  <div class="amenidad-text">Calefacción</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-wind"></i></div>
+                  <div class="amenidad-text available">Secador de pelo</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-lock"></i></div>
+                  <div class="amenidad-text">Caja fuerte</div>
+                </div>
+              </div>
+              <div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon">
+                    <i class="fas fa-wine-bottle"></i>
+                  </div>
+                  <div class="amenidad-text">Mini Bar</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-desk"></i></div>
+                  <div class="amenidad-text">Escritorio</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-tshirt"></i></div>
+                  <div class="amenidad-text available">
+                    Albornoces proporcionados
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-wifi"></i></div>
+                  <div class="amenidad-text">Internet inalámbrico</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-phone"></i></div>
+                  <div class="amenidad-text available">Teléfono</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon">
+                    <i class="fas fa-concierge-bell"></i>
+                  </div>
+                  <div class="amenidad-text available">
+                    Servicio de habitaciones diario
+                  </div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon">
+                    <i class="fas fa-elevator"></i>
+                  </div>
+                  <div class="amenidad-text available">Ascensor de acceso</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-bed"></i></div>
+                  <div class="amenidad-text available">
+                    Camas plegables disponibles
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-bell"></i></div>
+                  <div class="amenidad-text available">Despertador</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-tv"></i></div>
+                  <div class="amenidad-text available">Televisión</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon">
+                    <i class="fas fa-snowflake"></i>
+                  </div>
+                  <div class="amenidad-text available">
+                    Frigorífico - Frigorífico Bar
+                  </div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon">
+                    <i class="fas fa-concierge-bell"></i>
+                  </div>
+                  <div class="amenidad-text available">
+                    Servicio de habitaciones
+                  </div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-music"></i></div>
+                  <div class="amenidad-text available">Radio Reloj</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Descripción -->
+          <div class="descripcion-section">
+            <p>
+              Esta habitación se distingue por su elegante decorado, tiene una
+              cama king-size, cuenta con un espacioso escritorio de trabajo para
+              que el ejecutivo pueda realizar su trabajo, cuenta con un sistema
+              de aire acondicionado, y tiene una vista privilegiada de la ciudad
+              de La Paz.
+            </p>
+          </div>
+
+          <!-- Otras habitaciones -->
+          <div class="otras-habitaciones">
+            <h2 class="section-title">Otras Habitaciones</h2>
+            <div class="habitaciones-grid">
+              <div class="habitacion-card">
+                <div class="habitacion-imagen">
+                  <img
+                    src="https://images.unsplash.com/photo-1566669437685-b9e4df9c9c05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="Junior Suite"
+                  />
+                </div>
+                <div class="habitacion-info">
+                  <h3 class="habitacion-nombre">Junior Suite</h3>
+                  <p class="habitacion-desc">
+                    Es la habitación más exclusiva del hotel cuenta con jacuzzi.
+                    Ideada para una estadía romántica, desde esta habitación
+                    podrá disfrutar de las mejores vistas de la ciudad.
+                  </p>
+                  <a href="#" class="habitacion-btn">Ver más</a>
+                </div>
+              </div>
+              <div class="habitacion-card">
+                <div class="habitacion-imagen">
+                  <img
+                    src="https://images.unsplash.com/photo-1592229506159-f6a2c1a0a0d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="Premium King"
+                  />
+                </div>
+                <div class="habitacion-info">
+                  <h3 class="habitacion-nombre">Premium King</h3>
+                  <p class="habitacion-desc">
+                    Vistas a la Ciudad. Habitación ideal para parejas, disfruta
+                    de asombrosas vistas de la ciudad de La Paz mientras
+                    disfruta de una tranquilidad y confort incomparables.
+                  </p>
+                  <a href="#" class="habitacion-btn">Ver más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reserva -->
+          <div class="reserva-section">
+            <button class="reserva-btn">RESERVAR AHORA</button>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div id="fotterID"></div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/reutilizar.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

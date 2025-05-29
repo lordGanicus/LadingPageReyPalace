@@ -29,8 +29,8 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body id="top">
     <!-- 
       - #HEADER
@@ -38,132 +38,10 @@
     <header class="header" data-header>
       <div class="overlay" data-overlay></div>
 
-      <div class="header-top">
-        <div class="container">
-          <a
-            href="https://api.whatsapp.com/send/?phone=73501495&text=Hola%2C%20necesito%20más%20información."
-            target="_blank"
-            class="helpline-box"
-          >
-            <div class="icon-box">
-              <ion-icon name="call-outline"></ion-icon>
-            </div>
-
-            <div class="wrapper">
-              <p class="helpline-title">Contáctanos:</p>
-
-              <p class="helpline-number">+591 73501495</p>
-            </div>
-          </a>
-
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.png" alt="Rey Palace logo" />
-          </a>
-
-          <div class="header-btn-group">
-            <button class="search-btn" aria-label="Search"></button>
-            <button
-              class="nav-open-btn"
-              aria-label="Open Menu"
-              data-nav-open-btn
-            >
-              <ion-icon name="menu-outline"></ion-icon>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="header-bottom">
-        <div class="container">
-          <ul class="social-list">
-            <li>
-              <a
-                href="https://www.facebook.com/ReyPalaceLaPaz/"
-                class="social-link"
-                target="_blank"
-              >
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.tiktok.com/@hotel.rey.palace"
-                class="social-link"
-                target="_blank"
-              >
-                <ion-icon name="logo-tiktok"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.instagram.com/hotelrey_palace/"
-                class="social-link"
-                target="_blank"
-              >
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-          </ul>
-
-          <nav class="navbar" data-navbar>
-            <div class="navbar-top">
-              <a href="#" class="logo">
-                <img src="./assets/images/logo-fondo.jpg" alt="logo" />
-              </a>
-
-              <button
-                class="nav-close-btn"
-                aria-label="Close Menu"
-                data-nav-close-btn
-              >
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-            </div>
-
-            <ul class="navbar-list">
-              <li>
-                <a href="#Inicio" class="navbar-link" data-nav-link>inicio</a>
-              </li>
-
-              <li>
-                <a href="#servicios" class="navbar-link" data-nav-link
-                  >servicios</a
-                >
-              </li>
-
-              <li>
-                <a href="#paquete" class="navbar-link" data-nav-link
-                  >paquetes</a
-                >
-              </li>
-
-              <li>
-                <a href="#gallery" class="navbar-link" data-nav-link>galeria</a>
-              </li>
-              <li>
-                <a href="#menu-foot" class="navbar-link" data-nav-link
-                  >Menu del dia</a
-                >
-              </li>
-              <li>
-                <a href="#contact" class="navbar-link" data-nav-link
-                  >contáctanos</a
-                >
-              </li>
-            </ul>
-          </nav>
-
-          <button
-            onclick="window.open('https://api.whatsapp.com/send/?phone=73501495&text=Hola%2C%20necesito%20más%20información.', '_blank')"
-            class="btn btn-primary"
-          >
-            reservar ahora
-          </button>
-        </div>
-      </div>
+      <div id="headerTop"></div>
+      <div id="headerBottom"></div>
     </header>
+
     <main>
       <article>
         <!-- carousel -->
@@ -180,9 +58,7 @@
                   <!-- lorem 50 -->
                   Descubre el descanso perfecto en nuestras habitaciones
                   diseñadas para tu confort. Equipadas con todo lo que necesitas
-                  para una estancia inolvidable, disfruta de vistas
-                  espectaculares, comodidad inigualable y el mejor servicio en
-                  el centro de La Paz.
+                  para una estancia inolvidable.
                 </div>
                 <div class="buttons">
                   <button
@@ -204,10 +80,7 @@
                 <div class="topic">Mejor Hospitalidad</div>
                 <div class="des">
                   Nuestro hotel te ofrece la combinación perfecta de comodidad,
-                  ubicación privilegiada y atención de primer nivel. Vive una
-                  experiencia única en la hermosa ciudad de La Paz, rodeado de
-                  paisajes impresionantes y un servicio que te hará sentir como
-                  en casa.
+                  ubicación privilegiada y atención de primer nivel.
                 </div>
                 <div class="buttons">
                   <button
@@ -230,9 +103,7 @@
                 <div class="des">
                   Deléitate con la mejor gastronomía en un ambiente acogedor.
                   Nuestro restaurante ofrece una exquisita variedad de platillos
-                  locales e internacionales, preparados con ingredientes frescos
-                  y el toque especial de La Paz. Una experiencia culinaria que
-                  no querrás perderte.
+                  locales e internacionales.
                 </div>
                 <div class="buttons">
                   <button
@@ -255,9 +126,6 @@
                 <div class="des">
                   Celebra momentos inolvidables en nuestros salones versátiles,
                   ideales para bodas, conferencias y reuniones sociales.
-                  Equipados con tecnología moderna y un servicio impecable,
-                  garantizamos que cada evento sea un éxito en pleno corazón de
-                  La Paz.
                 </div>
                 <div class="buttons">
                   <button
@@ -828,53 +696,53 @@
         aqui se linkeara al menu
         
       -->
-        <div class="container">
-          <p class="section-subtitle">Restaurant</p>
-
-          <h2 class="h2 section-title">Menu del dia</h2>
-        </div>
         <section class="menu-foot" id="menu-foot">
-          <div class="container menu-foot-container">
-            <div class="menu-info">
-              <h4 class="section-subtitle">Restaurant & Cafetería</h4>
-              <h2 class="h2 section-title">REY PALACE</h2>
+          <div class="container">
+            <p class="section-subtitle">Restaurant</p>
 
-              <p class="section-text">
-                Deléitese con una gastronomía exquisita, con platos locales e
-                internacionales.
-              </p>
+            <h2 class="h2 section-title">Menu del dia</h2>
+            <div class="container menu-foot-container">
+              <div class="menu-info">
+                <h4 class="section-subtitle">Restaurant & Cafetería</h4>
+                <h2 class="h2 section-title">REY PALACE</h2>
 
-              <img
-                src="./assets/images/logo.png"
-                alt="Rey Palace Logo"
-                class="palace-logo"
-              />
-              <p class="menu-hours">
-                <i class="fa-regular fa-clock"></i> Todos los días: 7:00am -
-                11:00pm
-              </p>
-              <button
-                href="#reservas"
-                onclick="window.open('https://api.whatsapp.com/send/?phone=73501495&text=Hola%2C%20necesito%20más%20información.', '_blank')"
-                class="btn btn-secondary"
-              >
-                Menú y Reservas
-              </button>
-            </div>
+                <p class="section-text">
+                  Deléitese con una gastronomía exquisita, con platos locales e
+                  internacionales.
+                </p>
 
-            <div class="menu-frame">
-              <div class="iframe-card">
-                <iframe
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Frey.palace&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-                  width="500"
-                  height="600"
-                  style="border: none; overflow: hidden"
-                  scrolling="no"
-                  frameborder="0"
-                  allowfullscreen="true"
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                <img
+                  src="./assets/images/logo.png"
+                  alt="Rey Palace Logo"
+                  class="palace-logo"
+                />
+                <p class="menu-hours">
+                  <i class="fa-regular fa-clock"></i> Todos los días: 12:00pm -
+                  14:30pm
+                </p>
+                <button
+                  href="#reservas"
+                  onclick="window.open('https://api.whatsapp.com/send/?phone=76581804&text=Hola%2C%20quiero%20reservar%20el%20almuerzo.', '_blank')"
+                  class="btn btn-secondary"
                 >
-                </iframe>
+                  Menú y Reservas
+                </button>
+              </div>
+
+              <div class="menu-frame">
+                <div class="iframe-card">
+                  <iframe
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRestobarCieloUrbano&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+                    width="700"
+                    height="600"
+                    style="border: none; overflow: hidden"
+                    scrolling="no"
+                    frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  >
+                  </iframe>
+                </div>
               </div>
             </div>
           </div>
@@ -939,103 +807,7 @@
   -->
 
     <footer class="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="footer-brand">
-            <a href="#" class="logo">
-              <img src="./assets/images/logo.png" alt="Tourly logo" />
-            </a>
-
-            <p class="footer-text">
-              Vive una experiencia única y auténtica, en nuestro hotel 3
-              estrellas.
-            </p>
-          </div>
-
-          <div class="footer-contact">
-            <h4 class="contact-title">Contáctanos</h4>
-
-            <p class="contact-text">No dude en contactarnos!!</p>
-
-            <ul>
-              <li class="contact-item">
-                <ion-icon name="call-outline"></ion-icon>
-
-                <a
-                  href="https://api.whatsapp.com/send/?phone=73501495&text=Hola%2C%20necesito%20más%20información."
-                  target="_blank"
-                  class="contact-link"
-                  >+591 73501495</a
-                >
-              </li>
-
-              <li class="contact-item">
-                <ion-icon name="mail-outline"></ion-icon>
-
-                <a href="#" class="contact-link"
-                  >reservas@hotelesreypalace.com</a
-                >
-              </li>
-
-              <li class="contact-item">
-                <a
-                  href="https://maps.app.goo.gl/8cq4RrhfkkimLa8x6"
-                  target="_blank"
-                  class="contact-link"
-                >
-                  <ion-icon name="location-outline"></ion-icon>
-                </a>
-                <address>
-                  Av. 20 de Octubre y Landaeta, a una cuadra de la plaza del
-                  estudiante. N° 1947
-                </address>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-contact">
-            <h4 class="contact-title">Siguenos</h4>
-            <ul>
-              <li class="contact-item">
-                <ion-icon name="logo-facebook"></ion-icon>
-                <a
-                  href="https://www.facebook.com/ReyPalaceLaPaz/"
-                  class="contact-link"
-                  target="_blank"
-                  >Facebook</a
-                >
-              </li>
-
-              <li class="contact-item">
-                <ion-icon name="logo-tiktok"></ion-icon>
-                <a
-                  href="https://www.tiktok.com/@hotel.rey.palace"
-                  class="contact-link"
-                  target="_blank"
-                  >Tik tok</a
-                >
-              </li>
-
-              <li class="contact-item">
-                <ion-icon name="logo-instagram"></ion-icon>
-                <a
-                  href="https://www.instagram.com/hotelrey_palace/"
-                  class="contact-link"
-                  target="_blank"
-                  >Instagram</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="container">
-          <p class="copyright">
-            &copy; 2025 <a href="">Rey Palace</a>. Todos los derechos reservados
-          </p>
-        </div>
-      </div>
+      <div id="fotterID"></div>
     </footer>
 
     <!-- 
@@ -1058,6 +830,7 @@
       - custom js link
     -->
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/reutilizar.js"></script>
 
     <!-- 
       - ionicon link
