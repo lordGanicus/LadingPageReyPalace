@@ -34,7 +34,7 @@
     <!-- 
       - #HEADER
     -->
-    <header class="header" data-header>
+    <header class="header" id="header" data-header>
       <div class="overlay" data-overlay></div>
 
       <div id="headerTop"></div>
@@ -43,9 +43,339 @@
 
     <main>
       <article>
-        <section>
-          <span> habTriple </span>
-        </section>
+        <div class="container" id="container">
+          <h2 class="h2 section-title">Habitación Triple</h2>
+
+          <!-- Slider principal -->
+          <div class="slider-container">
+            <div class="main-slider" id="mainSlider">
+              <div class="main-slide active">
+                <img
+                  src="assets/images/habTriple/01.png"
+                  alt="Habitación Ejecutiva"
+                />
+              </div>
+              <div class="main-slide">
+                <img
+                  src="assets/images/habTriple/02.png"
+                  alt="Vista desde la habitación"
+                />
+              </div>
+              <div class="main-slide">
+                <img
+                  src="assets/images/habTriple/03.png"
+                  alt="Baño ejecutivo"
+                />
+              </div>
+              <div class="main-slide">
+                <img
+                  src="assets/images/habTriple/01.png"
+                  alt="Vista desde la habitación"
+                />
+              </div>
+              <div class="main-slide">
+                <img
+                  src="assets/images/habTriple/02.png"
+                  alt="Detalle de decoración"
+                />
+              </div>
+            </div>
+
+            <div class="slider-controls">
+              <button class="slider-btn" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="slider-btn" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mini slider -->
+          <div class="mini-slider-container">
+            <div class="mini-slider" id="miniSlider">
+              <div class="mini-slide active" data-index="0">
+                <img
+                  src="assets/images/habTriple/01.png"
+                  alt="Habitación Ejecutiva"
+                />
+              </div>
+              <div class="mini-slide" data-index="1">
+                <img
+                  src="assets/images/habTriple/02.png"
+                  alt="Área de trabajo"
+                />
+              </div>
+              <div class="mini-slide" data-index="2">
+                <img
+                  src="assets/images/habTriple/03.png"
+                  alt="Baño ejecutivo"
+                />
+              </div>
+              <div class="mini-slide" data-index="3">
+                <img
+                  src="assets/images/habTriple/01.png"
+                  alt="Vista desde la habitación"
+                />
+              </div>
+              <div class="mini-slide" data-index="4">
+                <img
+                  src="assets/images/habTriple/02.png"
+                  alt="Detalle de decoración"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="descripcion-section">
+            <p>
+              Espaciosa y funcional, ideal para grupos o familias. La habitación
+              triple está equipada con tres camas individuales o una cama doble
+              y una individual, ofreciendo confort y privacidad. Cuenta con baño
+              privado, escritorio de trabajo, aire acondicionado y un ambiente
+              moderno para una estancia agradable.
+            </p>
+          </div>
+
+          <!-- Amenidades -->
+          <div class="amenidades-section">
+            <h2 class="section-title">Lo que ofrecemos</h2>
+            <div class="amenidades-grid">
+              <div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon">
+                    <i class="fas fa-snowflake"></i>
+                  </div>
+                  <div class="amenidad-text available">Aire acondicionado</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-fire"></i></div>
+                  <div class="amenidad-text">Calefacción</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-wind"></i></div>
+                  <div class="amenidad-text available">Secador de pelo</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-lock"></i></div>
+                  <div class="amenidad-text">Caja fuerte</div>
+                </div>
+              </div>
+              <div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon">
+                    <i class="fas fa-wine-bottle"></i>
+                  </div>
+                  <div class="amenidad-text">Mini Bar</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-desk"></i></div>
+                  <div class="amenidad-text">Escritorio</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-tshirt"></i></div>
+                  <div class="amenidad-text available">
+                    Albornoces proporcionados
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-wifi"></i></div>
+                  <div class="amenidad-text">Internet inalámbrico</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-phone"></i></div>
+                  <div class="amenidad-text available">Teléfono</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon">
+                    <i class="fas fa-concierge-bell"></i>
+                  </div>
+                  <div class="amenidad-text available">
+                    Servicio de habitaciones diario
+                  </div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon">
+                    <i class="fas fa-elevator"></i>
+                  </div>
+                  <div class="amenidad-text available">Ascensor de acceso</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-bed"></i></div>
+                  <div class="amenidad-text available">
+                    Camas plegables disponibles
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-bell"></i></div>
+                  <div class="amenidad-text available">Despertador</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-tv"></i></div>
+                  <div class="amenidad-text available">Televisión</div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon">
+                    <i class="fas fa-snowflake"></i>
+                  </div>
+                  <div class="amenidad-text available">
+                    Frigorífico - Frigorífico Bar
+                  </div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon">
+                    <i class="fas fa-concierge-bell"></i>
+                  </div>
+                  <div class="amenidad-text available">
+                    Servicio de habitaciones
+                  </div>
+                </div>
+                <div class="amenidad-item">
+                  <div class="amenidad-icon"><i class="fas fa-music"></i></div>
+                  <div class="amenidad-text available">Radio Reloj</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="reserva-section"
+            onclick="window.open('https://api.whatsapp.com/send/?phone=73501495&text=Hola%2C%20quisiera%20más%20información%20sobre%20la%20habitación%20triple.', '_blank')"
+          >
+            <button class="reserva-btn">RESERVAR AHORA</button>
+          </div>
+
+          <!-- Descripción -->
+
+          <!-- Otras habitaciones -->
+          <div class="otras-habitaciones">
+            <p class="section-subtitle">Descubre nuestras habitaciones</p>
+
+            <h2 class="h2 section-title">Comodidad que inspira</h2>
+
+            <p class="section-text">
+              Nuestras habitaciones están diseñadas para brindarte descanso,
+              confort y funcionalidad.
+            </p>
+            <div class="habitaciones-grid">
+              <div class="habitacion-card">
+                <div class="habitacion-imagen">
+                  <img
+                    src="assets/images/habSimple/ReyPalacePics-01.jpg"
+                    alt="Habitación Simple"
+                  />
+                </div>
+                <div class="habitacion-info">
+                  <h3 class="habitacion-nombre">Habitación Simple</h3>
+                  <p class="habitacion-desc">
+                    Habitación individual equipada con una cama, baño privado y
+                    todas las comodidades esenciales para una estadía
+                    confortable.
+                  </p>
+                  <a
+                    href="./habSimple.html"
+                    target="_blank"
+                    class="habitacion-btn"
+                    >Ver más</a
+                  >
+                </div>
+              </div>
+
+              <div class="habitacion-card">
+                <div class="habitacion-imagen">
+                  <img
+                    src="assets/images/habDoble2/hab1.1.jpg"
+                    alt="Habitación Doble"
+                  />
+                </div>
+                <div class="habitacion-info">
+                  <h3 class="habitacion-nombre">Habitación Doble</h3>
+                  <p class="habitacion-desc">
+                    Espaciosa habitación con dos camas individuales o una cama
+                    doble, perfecta para amigos o parejas que buscan comodidad.
+                  </p>
+                  <a
+                    href="./habDoble.html"
+                    target="_blank"
+                    class="habitacion-btn"
+                    >Ver más</a
+                  >
+                </div>
+              </div>
+
+              <div class="habitacion-card">
+                <div class="habitacion-imagen">
+                  <img
+                    src="assets/images/habTriple/01.png"
+                    alt="Habitación Triple"
+                  />
+                </div>
+                <div class="habitacion-info">
+                  <h3 class="habitacion-nombre">Habitación Triple</h3>
+                  <p class="habitacion-desc">
+                    Ideal para familias o grupos pequeños, cuenta con tres camas
+                    individuales o una combinación según disponibilidad.
+                  </p>
+                  <a
+                    href="./habTriple.html"
+                    target="_blank"
+                    class="habitacion-btn"
+                    >Ver más</a
+                  >
+                </div>
+              </div>
+
+              <div class="habitacion-card">
+                <div class="habitacion-imagen">
+                  <img
+                    src="assets/images/habMatrimonial/ReyPalacePics-20.jpg"
+                    alt="Habitación Matrimonial"
+                  />
+                </div>
+                <div class="habitacion-info">
+                  <h3 class="habitacion-nombre">Habitación Matrimonial</h3>
+                  <p class="habitacion-desc">
+                    Diseñada para parejas, equipada con una cama matrimonial,
+                    iluminación suave y detalles que garantizan una experiencia
+                    romántica.
+                  </p>
+                  <a
+                    href="./habMatrimonial.html"
+                    target="_blank"
+                    class="habitacion-btn"
+                    >Ver más</a
+                  >
+                </div>
+              </div>
+
+              <div class="habitacion-card">
+                <div class="habitacion-imagen">
+                  <img
+                    src="assets/images/habSuitEjecutiva/ReyPalacePics-08.jpg"
+                    alt="Suite Ejecutiva"
+                  />
+                </div>
+                <div class="habitacion-info">
+                  <h3 class="habitacion-nombre">Suite Ejecutiva</h3>
+                  <p class="habitacion-desc">
+                    La más exclusiva del hotel, con áreas de descanso y trabajo,
+                    jacuzzi y vistas privilegiadas. Ideal para estadías largas o
+                    de lujo.
+                  </p>
+                  <a
+                    href="./habSuitEjecutiva.html"
+                    target="_blank"
+                    class="habitacion-btn"
+                    >Ver más</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Reserva -->
       </article>
     </main>
 

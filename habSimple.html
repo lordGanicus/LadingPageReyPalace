@@ -43,7 +43,7 @@
 
     <main>
       <article>
-        <div class="container">
+        <div class="container" id="container">
           <h2 class="h2 section-title">Habitación Simple</h2>
 
           <!-- Slider principal -->
@@ -126,10 +126,19 @@
               </div>
             </div>
           </div>
+          <div class="descripcion-section">
+            <p>
+              Disfruta de una estancia cómoda y funcional en nuestra habitación
+              simple, diseñada con un elegante decorado. Equipada con una cama
+              king-size para un descanso pleno, un amplio escritorio ideal para
+              trabajar con comodidad, sistema de aire acondicionado para un
+              ambiente agradable.
+            </p>
+          </div>
 
           <!-- Amenidades -->
           <div class="amenidades-section">
-            <h2 class="section-title">Amenidades</h2>
+            <h2 class="section-title">Lo que ofrecemos</h2>
             <div class="amenidades-grid">
               <div>
                 <div class="amenidad-item">
@@ -231,64 +240,142 @@
               </div>
             </div>
           </div>
+          <div
+            class="reserva-section"
+            onclick="window.open('https://api.whatsapp.com/send/?phone=73501495&text=Hola%2C%20quisiera%20más%20información%20sobre%20la%20habitación%20simple.', '_blank')"
+          >
+            <button class="reserva-btn">RESERVAR AHORA</button>
+          </div>
 
           <!-- Descripción -->
-          <div class="descripcion-section">
-            <p>
-              Esta habitación se distingue por su elegante decorado, tiene una
-              cama king-size, cuenta con un espacioso escritorio de trabajo para
-              que el ejecutivo pueda realizar su trabajo, cuenta con un sistema
-              de aire acondicionado, y tiene una vista privilegiada de la ciudad
-              de La Paz.
-            </p>
-          </div>
 
           <!-- Otras habitaciones -->
           <div class="otras-habitaciones">
-            <h2 class="section-title">Otras Habitaciones</h2>
+            <p class="section-subtitle">Descubre nuestras habitaciones</p>
+
+            <h2 class="h2 section-title">Comodidad que inspira</h2>
+
+            <p class="section-text">
+              Nuestras habitaciones están diseñadas para brindarte descanso,
+              confort y funcionalidad.
+            </p>
             <div class="habitaciones-grid">
               <div class="habitacion-card">
                 <div class="habitacion-imagen">
                   <img
-                    src="https://images.unsplash.com/photo-1566669437685-b9e4df9c9c05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                    alt="Junior Suite"
+                    src="assets/images/habSimple/ReyPalacePics-01.jpg"
+                    alt="Habitación Simple"
                   />
                 </div>
                 <div class="habitacion-info">
-                  <h3 class="habitacion-nombre">Junior Suite</h3>
+                  <h3 class="habitacion-nombre">Habitación Simple</h3>
                   <p class="habitacion-desc">
-                    Es la habitación más exclusiva del hotel cuenta con jacuzzi.
-                    Ideada para una estadía romántica, desde esta habitación
-                    podrá disfrutar de las mejores vistas de la ciudad.
+                    Habitación individual equipada con una cama, baño privado y
+                    todas las comodidades esenciales para una estadía
+                    confortable.
                   </p>
-                  <a href="#" class="habitacion-btn">Ver más</a>
+                  <a
+                    href="./habSimple.html"
+                    target="_blank"
+                    class="habitacion-btn"
+                    >Ver más</a
+                  >
                 </div>
               </div>
+
               <div class="habitacion-card">
                 <div class="habitacion-imagen">
                   <img
-                    src="https://images.unsplash.com/photo-1592229506159-f6a2c1a0a0d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                    alt="Premium King"
+                    src="assets/images/habDoble2/hab1.1.jpg"
+                    alt="Habitación Doble"
                   />
                 </div>
                 <div class="habitacion-info">
-                  <h3 class="habitacion-nombre">Premium King</h3>
+                  <h3 class="habitacion-nombre">Habitación Doble</h3>
                   <p class="habitacion-desc">
-                    Vistas a la Ciudad. Habitación ideal para parejas, disfruta
-                    de asombrosas vistas de la ciudad de La Paz mientras
-                    disfruta de una tranquilidad y confort incomparables.
+                    Espaciosa habitación con dos camas individuales o una cama
+                    doble, perfecta para amigos o parejas que buscan comodidad.
                   </p>
-                  <a href="#" class="habitacion-btn">Ver más</a>
+                  <a
+                    href="./habDoble.html"
+                    target="_blank"
+                    class="habitacion-btn"
+                    >Ver más</a
+                  >
+                </div>
+              </div>
+
+              <div class="habitacion-card">
+                <div class="habitacion-imagen">
+                  <img
+                    src="assets/images/habTriple/01.png"
+                    alt="Habitación Triple"
+                  />
+                </div>
+                <div class="habitacion-info">
+                  <h3 class="habitacion-nombre">Habitación Triple</h3>
+                  <p class="habitacion-desc">
+                    Ideal para familias o grupos pequeños, cuenta con tres camas
+                    individuales o una combinación según disponibilidad.
+                  </p>
+                  <a
+                    href="./habTriple.html"
+                    target="_blank"
+                    class="habitacion-btn"
+                    >Ver más</a
+                  >
+                </div>
+              </div>
+
+              <div class="habitacion-card">
+                <div class="habitacion-imagen">
+                  <img
+                    src="assets/images/habMatrimonial/ReyPalacePics-20.jpg"
+                    alt="Habitación Matrimonial"
+                  />
+                </div>
+                <div class="habitacion-info">
+                  <h3 class="habitacion-nombre">Habitación Matrimonial</h3>
+                  <p class="habitacion-desc">
+                    Diseñada para parejas, equipada con una cama matrimonial,
+                    iluminación suave y detalles que garantizan una experiencia
+                    romántica.
+                  </p>
+                  <a
+                    href="./habMatrimonial.html"
+                    target="_blank"
+                    class="habitacion-btn"
+                    >Ver más</a
+                  >
+                </div>
+              </div>
+
+              <div class="habitacion-card">
+                <div class="habitacion-imagen">
+                  <img
+                    src="assets/images/habSuitEjecutiva/ReyPalacePics-08.jpg"
+                    alt="Suite Ejecutiva"
+                  />
+                </div>
+                <div class="habitacion-info">
+                  <h3 class="habitacion-nombre">Suite Ejecutiva</h3>
+                  <p class="habitacion-desc">
+                    La más exclusiva del hotel, con áreas de descanso y trabajo,
+                    jacuzzi y vistas privilegiadas. Ideal para estadías largas o
+                    de lujo.
+                  </p>
+                  <a
+                    href="./habSuitEjecutiva.html"
+                    target="_blank"
+                    class="habitacion-btn"
+                    >Ver más</a
+                  >
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Reserva -->
-          <div class="reserva-section">
-            <button class="reserva-btn">RESERVAR AHORA</button>
-          </div>
         </div>
+        <!-- Reserva -->
       </article>
     </main>
 
