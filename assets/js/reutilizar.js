@@ -133,6 +133,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     },
   });
 });
+
+/************************slider para las habitaciones */
 document.addEventListener("DOMContentLoaded", function () {
   const mainSlider = document.getElementById("mainSlider");
   const mainSlides = document.querySelectorAll(".main-slide");
@@ -218,6 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   /********** */
 });
+/**************************slider para el menu libro */
 document.addEventListener("DOMContentLoaded", function () {
   const contenedorLibro = document.getElementById("libroInner");
   const paginasLibro = document.querySelectorAll(".pagina");
@@ -286,6 +289,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Iniciar
   actualizarLibro();
 });
+/**************slider para salones */
 document.addEventListener("DOMContentLoaded", function () {
   const mainSlider = document.getElementById("mainSlider");
   const mainSlides = document.querySelectorAll(".main-slide");
@@ -307,12 +311,13 @@ document.addEventListener("DOMContentLoaded", function () {
     miniSlides.forEach((slide) => slide.classList.remove("active"));
     miniSlides[index].classList.add("active");
 
-    // Scroll mini slider para mostrar la imagen activa
-    if (miniSlides[index]) {
-      miniSlides[index].scrollIntoView({
+    // Scroll manual dentro del mini-slider sin mover la página
+    const parent = miniSlides[index].parentElement;
+    if (parent) {
+      const slideTop = miniSlides[index].offsetTop;
+      parent.scrollTo({
+        top: slideTop - 10, // Ajuste opcional
         behavior: "smooth",
-        block: "nearest",
-        inline: "center",
       });
     }
   }

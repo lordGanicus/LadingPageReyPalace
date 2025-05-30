@@ -119,6 +119,8 @@ html {
 
 body {
   background: var(--white);
+  scroll-behavior: auto; /* importante */
+  overflow-x: hidden;
 }
 
 /*-----------------------------------*\
@@ -2024,6 +2026,7 @@ address {
   transition: all 0.3s ease;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   opacity: 0.7;
+  scroll-behavior: smooth; /* opcional */
 }
 
 .mini-slide.active {
@@ -2373,7 +2376,12 @@ address {
   .habitacion-titulo {
     font-size: 2rem;
   }
+  .descripcion-section {
+    padding: 1.5rem;
 
+    line-height: 1.8;
+    font-size: 0.8rem;
+  }
   .main-slider {
     height: 400px;
   }
