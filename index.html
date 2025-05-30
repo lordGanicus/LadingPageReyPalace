@@ -66,7 +66,10 @@
                   >
                     RESERVA
                   </button>
-                  <button button onclick="location.href='#servicios'">
+                  <button
+                    button
+                    onclick="location.href='./index.html#habitaciones'"
+                  >
                     VER MAS
                   </button>
                 </div>
@@ -88,7 +91,7 @@
                   >
                     RESERVA
                   </button>
-                  <button button onclick="location.href='#paquete'">
+                  <button button onclick="location.href='./habitaciones.html'">
                     VER MAS
                   </button>
                 </div>
@@ -133,7 +136,7 @@
                   >
                     RESERVA
                   </button>
-                  <button button onclick="location.href='#gallery'">
+                  <button button onclick="location.href='./index.html#salones'">
                     VER MAS
                   </button>
                 </div>
@@ -310,6 +313,119 @@
             </div>
           </div>
         </section>
+        <section class="restaurante" id="restaurante">
+          <div class="container">
+            <p class="section-subtitle">Descubre nuestra cocina</p>
+
+            <h2 class="h2 section-title">Sabor que enamora</h2>
+
+            <p class="section-text">
+              En Gales Restaurant te ofrecemos una experiencia gastronómica
+              única, con platos cuidadosamente elaborados para deleitar tu
+              paladar en un ambiente acogedor.
+            </p>
+            <div class="restaurante-container">
+              <!-- Slider estilo libro mejorado -->
+              <div class="libro-slider">
+                <div class="libro-inner" id="libroInner">
+                  <div class="pagina">
+                    <img
+                      src="assets/images/restaurante/GalesRest_ReyPalace-01.jpg"
+                      alt="Plato especial del restaurante"
+                    />
+                  </div>
+                  <div class="pagina">
+                    <img
+                      src="assets/images/restaurante/GalesRest_ReyPalace-04.jpg"
+                      alt="Bar del restaurante"
+                    />
+                  </div>
+                  <div class="pagina active">
+                    <img
+                      src="assets/images/restaurante/GalesRest_ReyPalace-16.jpg"
+                      alt="Interior del restaurante Gales"
+                    />
+                  </div>
+                  <div class="pagina">
+                    <img
+                      src="assets/images/restaurante/GalesRest_ReyPalace-23.jpg"
+                      alt="Terraza del restaurante"
+                    />
+                  </div>
+                  <div class="pagina">
+                    <img
+                      src="assets/images/restaurante/GalesRest_ReyPalace-24.jpg"
+                      alt="Chef preparando platos"
+                    />
+                  </div>
+                </div>
+
+                <div class="libro-controls">
+                  <button class="libro-btn" id="prevBtn1">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="libro-btn" id="nextBtn1">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Información del restaurante al mismo nivel -->
+              <div class="restaurante-info">
+                <div class="info-content">
+                  <h1 class="restaurante-titulo">GALES</h1>
+                  <h2 class="restaurante-subtitulo">Restaurante</h2>
+
+                  <p class="restaurante-descripcion">
+                    Fusionamos tradición y modernidad para ofrecerte platos
+                    exquisitos en un ambiente acogedor. Nuestro restaurante en
+                    La Paz es el lugar ideal para disfrutar de una exelente
+                    comida.
+                  </p>
+
+                  <div class="restaurante-contacto">
+                    <div class="contacto-item">
+                      <i
+                        class="fas fa-map-marker-alt"
+                        href="https://maps.app.goo.gl/8cq4RrhfkkimLa8x6"
+                        target="_blank"
+                      ></i>
+                      <span
+                        >Avenida 20 de octubre 1947 entre Landaeta y JJ Perez,
+                        La Paz, Bolivia</span
+                      >
+                    </div>
+                    <div class="contacto-item">
+                      <i
+                        class="fas fa-phone-alt"
+                        href="https://api.whatsapp.com/send/?phone=62430178&text=Hola%2C%20quiero%20hacer%20una%20reserva."
+                        target="_blank"
+                      ></i>
+                      <span>+591 62430178</span>
+                    </div>
+                    <div class="contacto-item">
+                      <i class="fas fa-envelope"></i>
+                      <span>info@restaurantgales.com</span>
+                    </div>
+                  </div>
+
+                  <div class="botones-container">
+                    <a href="./index.html#menu-foot" class="info-btn btn-menu">
+                      <i class="fas fa-utensils"></i> VER MENÚ
+                    </a>
+                    <a
+                      href="https://api.whatsapp.com/send/?phone=62430178&text=Hola%2C%20quiero%20hacer%20una%20reserva%20del%20restaurante."
+                      class="info-btn btn-reserva"
+                    >
+                      <i class="fas fa-calendar-check"></i> RESERVAR MESA
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="popular" id="servicios">
           <div class="container">
             <p class="section-subtitle">Descubra los servicios</p>

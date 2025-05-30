@@ -216,4 +216,73 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", function () {
     updateSliders(currentIndex);
   });
+  /********** */
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const contenedorLibro = document.getElementById("libroInner");
+  const paginasLibro = document.querySelectorAll(".pagina");
+  const btnAnterior = document.getElementById("prevBtn1");
+  const btnSiguiente = document.getElementById("nextBtn1");
+
+  let indiceActual = 2; // Empezar con la imagen central
+  const totalPaginas = paginasLibro.length;
+
+  // Función para actualizar el efecto tipo libro
+  function actualizarLibro() {
+    paginasLibro.forEach((paginaActual, indice) => {
+      paginaActual.classList.remove("active");
+
+      const diferencia = (indice - indiceActual + totalPaginas) % totalPaginas;
+
+      if (diferencia === 0) {
+        paginaActual.style.transform = "rotateY(0deg)";
+        paginaActual.style.zIndex = "6";
+        paginaActual.classList.add("active");
+      } else if (diferencia === 1 || diferencia === totalPaginas - 1) {
+        const rotacion = diferencia === 1 ? 15 : -15;
+        const desplazamiento = diferencia === 1 ? "10px" : "-10px";
+        paginaActual.style.transform = `rotateY(${rotacion}deg) translateX(${desplazamiento})`;
+        paginaActual.style.zIndex = "5";
+      } else if (diferencia === 2 || diferencia === totalPaginas - 2) {
+        const rotacion = diferencia === 2 ? 30 : -30;
+        const desplazamiento = diferencia === 2 ? "20px" : "-20px";
+        paginaActual.style.transform = `rotateY(${rotacion}deg) translateX(${desplazamiento})`;
+        paginaActual.style.zIndex = "4";
+      } else {
+        paginaActual.style.transform = "rotateY(0deg) translateX(0)";
+        paginaActual.style.zIndex = "3";
+      }
+    });
+  }
+
+  // Avanzar
+  function siguientePagina() {
+    indiceActual = (indiceActual + 1) % totalPaginas;
+    actualizarLibro();
+  }
+
+  // Retroceder
+  function anteriorPagina() {
+    indiceActual = (indiceActual - 1 + totalPaginas) % totalPaginas;
+    actualizarLibro();
+  }
+
+  // Eventos
+  btnSiguiente.addEventListener("click", siguientePagina);
+  btnAnterior.addEventListener("click", anteriorPagina);
+
+  // Auto deslizamiento
+  let intervaloDeslizamiento = setInterval(siguientePagina, 5000);
+
+  // Pausa al pasar el mouse
+  contenedorLibro.addEventListener("mouseenter", () => {
+    clearInterval(intervaloDeslizamiento);
+  });
+
+  contenedorLibro.addEventListener("mouseleave", () => {
+    intervaloDeslizamiento = setInterval(siguientePagina, 5000);
+  });
+
+  // Iniciar
+  actualizarLibro();
 });
