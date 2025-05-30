@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Rey Palace</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.jpg"
+      type="image/jpg+xml"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <body id="top">
+    <!-- 
+      - #HEADER
+    -->
+    <header class="header" id="header" data-header>
+      <div class="overlay" data-overlay></div>
+
+      <div id="headerTop"></div>
+      <div id="headerBottom"></div>
+    </header>
+
+    <main>
+      <article>
+        <div class="container" id="container">
+          <h2 class="h2 section-title">Salon Arturo</h2>
+          <div class="salon-container">
+            <!-- Contenedor de imágenes -->
+            <div class="imagenes-container">
+              <!-- Slider principal -->
+              <div class="slider-principal">
+                <div class="slider-grande" id="mainSlider">
+                  <!-- Slides principales -->
+                  <div class="main-slide active">
+                    <img src="assets/images/arturo/02.jpg" alt="Salón Gales" />
+                  </div>
+                  <div class="main-slide">
+                    <img
+                      src="assets/images/arturo/04.jpg"
+                      alt="Área principal"
+                    />
+                  </div>
+                  <div class="main-slide">
+                    <img
+                      src="assets/images/arturo/05.jpg"
+                      alt="Ambiente del salón"
+                    />
+                  </div>
+                  <div class="main-slide">
+                    <img
+                      src="assets/images/arturo/20220609_222436.png"
+                      alt="Vista del salón"
+                    />
+                  </div>
+                  <div class="main-slide">
+                    <img
+                      src="assets/images/arturo/salon1.1.png"
+                      alt="Detalle del salón"
+                    />
+                  </div>
+                </div>
+
+                <!-- Controles del slider -->
+                <div class="slider-controls">
+                  <button class="slider-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="slider-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mini slider vertical a la derecha -->
+              <div class="mini-slider-vertical">
+                <div class="mini-slide active" data-index="0">
+                  <img src="assets/images/arturo/02.jpg" alt="Salón York" />
+                </div>
+                <div class="mini-slide" data-index="1">
+                  <img src="assets/images/arturo/04.jpg" alt="Área principal" />
+                </div>
+                <div class="mini-slide" data-index="2">
+                  <img
+                    src="assets/images/arturo/05.jpg"
+                    alt="Ambiente del salón"
+                  />
+                </div>
+                <div class="mini-slide" data-index="3">
+                  <img
+                    src="assets/images/arturo/20220609_222436.png"
+                    alt="Vista del salón"
+                  />
+                </div>
+                <div class="mini-slide" data-index="4">
+                  <img
+                    src="assets/images/arturo/salon1.1.png"
+                    alt="Detalle del salón"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Información del salón -->
+            <div class="info-container">
+              <div class="salon-info">
+                <p class="salon-subtitulo">
+                  Uno de los salones principales del Hotel, con ingreso propio e
+                  ideal para cualquier tipo de evento
+                </p>
+
+                <div class="eventos-container">
+                  <h3 class="eventos-titulo">Ideal para celebrar:</h3>
+                  <div class="eventos-tags">
+                    <span class="evento-tag">👶 Baby Shower</span>
+                    <span class="evento-tag">🎂 Cumpleaños</span>
+                    <span class="evento-tag">💍 Aniversarios</span>
+                    <span class="evento-tag">💼 Eventos Corporativos</span>
+                    <span class="evento-tag">🎓 Cenas de graduación</span>
+                    <span class="evento-tag">👰‍♀️ Bodas</span>
+                    <span class="evento-tag">🎉 15 años</span>
+                  </div>
+                </div>
+
+                <div class="servicios-container">
+                  <h3 class="servicios-titulo">Servicios incluidos</h3>
+                  <div class="servicios-lista">
+                    <div class="servicio-item">
+                      <i class="fas fa-users servicio-icono"></i>
+                      <span class="servicio-texto"
+                        >Capacidad: 10-150 personas</span
+                      >
+                    </div>
+                    <div class="servicio-item">
+                      <i class="fas fa-wifi servicio-icono"></i>
+                      <span class="servicio-texto">Wifi de alta velocidad</span>
+                    </div>
+                    <div class="servicio-item">
+                      <i class="fas fa-volume-up servicio-icono"></i>
+                      <span class="servicio-texto">Sistema de sonido</span>
+                    </div>
+                    <div class="servicio-item">
+                      <i class="fas fa-microphone servicio-icono"></i>
+                      <span class="servicio-texto">Micrófono inalámbrico</span>
+                    </div>
+                    <div class="servicio-item">
+                      <i class="fas fa-video servicio-icono"></i>
+                      <span class="servicio-texto">Proyector y pantalla</span>
+                    </div>
+                    <div class="servicio-item">
+                      <i class="fas fa-tv servicio-icono"></i>
+                      <span class="servicio-texto">Pantalla digital</span>
+                    </div>
+                    <div class="servicio-item">
+                      <i class="fas fa-utensils servicio-icono"></i>
+                      <span class="servicio-texto">Opción de catering</span>
+                    </div>
+                    <div class="servicio-item">
+                      <i class="fas fa-lightbulb servicio-icono"></i>
+                      <span class="servicio-texto"
+                        >Iluminación profesional</span
+                      >
+                    </div>
+                    <div class="servicio-item">
+                      <i class="fas fa-calendar-check servicio-icono"></i>
+                      <span class="servicio-texto"
+                        >Coordinadora de eventos</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="botones-container">
+                  <a
+                    href="https://api.whatsapp.com/send/?phone=75870235&text=Hola%2C%20quiero%20hacer%20una%20reserva%20del%20salon%20Rey%20Arturo."
+                    target="_blank"
+                    class="info-btn btn-cotizar"
+                    >COTIZAR EVENTO</a
+                  >
+                  <a
+                    href="https://www.facebook.com/people/Sal%C3%B3n-de-Eventos-Rey-Palace/100083265824811/"
+                    target="_blank"
+                    class="info-btn btn-contacto"
+                    >Ver más</a
+                  >
+                </div>
+
+                <!-- Servicios adicionales -->
+                <div class="servicios-adicionales">
+                  <h2 class="servicios-adicionales-titulo">
+                    Servicios Adicionales
+                  </h2>
+
+                  <div class="servicios-grid">
+                    <div class="servicio-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                        alt="Catering Gourmet"
+                        class="servicio-imagen"
+                      />
+                      <div class="servicio-contenido">
+                        <h3 class="servicio-nombre">Catering Gourmet</h3>
+                        <p class="servicio-descripcion">
+                          Bocados tradicionales y gourmet para complementar tu
+                          evento. Menús personalizados con opciones para todos
+                          los gustos y dietas especiales.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="servicio-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                        alt="Arreglos Florales"
+                        class="servicio-imagen"
+                      />
+                      <div class="servicio-contenido">
+                        <h3 class="servicio-nombre">Arreglos Florales</h3>
+                        <p class="servicio-descripcion">
+                          Tocados con flores naturales según tu temática.
+                          Diseños exclusivos que realzarán la belleza de tu
+                          evento con los mejores arreglos florales.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="servicio-card">
+                      <img
+                        src="assets/images/imTem.jpeg"
+                        alt="Habitaciones Especiales"
+                        class="servicio-imagen"
+                      />
+                      <div class="servicio-contenido">
+                        <h3 class="servicio-nombre">Habitaciones Especiales</h3>
+                        <p class="servicio-descripcion">
+                          Matrimoniales y suites con decoración temática.
+                          Espacios exclusivos para los novios o invitados
+                          especiales, con todos los lujos y comodidades.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div id="fotterID"></div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/reutilizar.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

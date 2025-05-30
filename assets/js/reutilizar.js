@@ -286,3 +286,87 @@ document.addEventListener("DOMContentLoaded", function () {
   // Iniciar
   actualizarLibro();
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const mainSlider = document.getElementById("mainSlider");
+  const mainSlides = document.querySelectorAll(".main-slide");
+  const miniSlides = document.querySelectorAll(".mini-slide");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  let currentIndex = 0;
+  const slideCount = mainSlides.length;
+  let slideInterval;
+
+  // Función para actualizar los sliders
+  function updateSliders(index) {
+    // Actualizar main slider
+    mainSlides.forEach((slide) => slide.classList.remove("active"));
+    mainSlides[index].classList.add("active");
+
+    // Actualizar mini slider
+    miniSlides.forEach((slide) => slide.classList.remove("active"));
+    miniSlides[index].classList.add("active");
+
+    // Scroll mini slider para mostrar la imagen activa
+    if (miniSlides[index]) {
+      miniSlides[index].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
+    }
+  }
+
+  // Función para avanzar al siguiente slide
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slideCount;
+    updateSliders(currentIndex);
+  }
+
+  // Función para retroceder al slide anterior
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+    updateSliders(currentIndex);
+  }
+
+  // Event listeners para los botones
+  nextBtn.addEventListener("click", nextSlide);
+  prevBtn.addEventListener("click", prevSlide);
+
+  // Event listeners para los mini slides
+  miniSlides.forEach((slide, index) => {
+    slide.addEventListener("click", () => {
+      currentIndex = index;
+      updateSliders(currentIndex);
+    });
+  });
+
+  // Auto slide
+  function startSlideShow() {
+    slideInterval = setInterval(nextSlide, 5000);
+  }
+
+  function stopSlideShow() {
+    clearInterval(slideInterval);
+  }
+
+  // Iniciar el slideshow
+  startSlideShow();
+
+  // Pausar al interactuar
+  mainSlider.addEventListener("mouseenter", stopSlideShow);
+  mainSlider.addEventListener("mouseleave", startSlideShow);
+
+  // Pausar al interactuar con mini slider
+  document
+    .querySelector(".mini-slider-vertical")
+    .addEventListener("mouseenter", stopSlideShow);
+  document
+    .querySelector(".mini-slider-vertical")
+    .addEventListener("mouseleave", startSlideShow);
+
+  // Actualizar al cambiar tamaño de ventana
+  window.addEventListener("resize", function () {
+    updateSliders(currentIndex);
+  });
+});
