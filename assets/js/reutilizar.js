@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const res = await fetch("/assets/paginas/headerTop.html");
+    const res = await fetch("../assets/paginas/headerTop.html");
     const data = await res.text();
     document.getElementById("headerTop").innerHTML = data;
   } catch (error) {
     console.error("Error al cargar navbar:", error);
   }
   try {
-    const res = await fetch("/assets/paginas/headerBottom.html");
+    const res = await fetch("../assets/paginas/headerBottom.html");
     const data = await res.text();
     document.getElementById("headerBottom").innerHTML = data;
   } catch (error) {
     console.error("Error al cargar navbar:", error);
   }
   try {
-    const res = await fetch("/assets/paginas/fotter.html");
+    const res = await fetch("../assets/paginas/fotter.html");
     const data = await res.text();
     document.getElementById("fotterID").innerHTML = data;
   } catch (error) {
@@ -456,4 +456,52 @@ document.addEventListener("DOMContentLoaded", function () {
     clearInterval(autoSlideInterval);
     startAutoSlide();
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Crear pétalos decorativos
+  const petalsContainer = document.getElementById("petals");
+  for (let i = 0; i < 12; i++) {
+    const petal = document.createElement("div");
+    petal.classList.add("pr-petal");
+
+    // Tamaño aleatorio
+    const size = Math.random() * 20 + 15;
+    petal.style.width = `${size}px`;
+    petal.style.height = `${size}px`;
+
+    // Posición aleatoria
+    petal.style.left = `${Math.random() * 100}%`;
+    petal.style.bottom = `-${size}px`;
+
+    // Duración y delay aleatorio
+    petal.style.animationDuration = `${Math.random() * 10 + 10}s`;
+    petal.style.animationDelay = `${Math.random() * 5}s`;
+
+    // Opacidad aleatoria
+    petal.style.opacity = Math.random() * 0.5 + 0.3;
+
+    petalsContainer.appendChild(petal);
+  }
+
+  // Inicializar Splide
+  new Splide(".splide", {
+    type: "fade",
+    rewind: true,
+    autoplay: true,
+    interval: 6000,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    speed: 1000,
+    arrows: true,
+    pagination: true,
+    classes: {
+      arrows: "splide__arrows",
+      arrow: "splide__arrow",
+      prev: "splide__arrow--prev",
+      next: "splide__arrow--next",
+      pagination: "splide__pagination",
+      page: "splide__pagination__page",
+    },
+  }).mount();
 });
