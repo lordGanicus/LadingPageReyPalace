@@ -386,3 +386,74 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSliders(currentIndex);
   });
 });
+
+/***********Slider para los paquetes en la seccion de index*************/
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector(".romantic-slider");
+  const slides = document.querySelectorAll(".romantic-slide");
+  const prevBtns = document.querySelectorAll(".romantic-prev-btn");
+  const nextBtns = document.querySelectorAll(".romantic-next-btn");
+  const currentSlides = document.querySelectorAll(".romantic-current-slide");
+  const totalSlides = document.querySelector(".romantic-total-slides");
+
+  let currentIndex = 0;
+  const total = slides.length;
+  let autoSlideInterval;
+  const slideDuration = 5000; // 5 segundos
+
+  // Función para iniciar el auto-slide
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+      goToSlide((currentIndex + 1) % total);
+    }, slideDuration);
+  }
+
+  // Función para ir a un slide específico
+  function goToSlide(index) {
+    currentIndex = index;
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    updateCounters();
+  }
+
+  // Actualizar todos los contadores de slides
+  function updateCounters() {
+    currentSlides.forEach((counter) => {
+      counter.textContent = currentIndex + 1;
+    });
+    if (totalSlides) {
+      totalSlides.textContent = total;
+    }
+  }
+
+  // Configurar eventos para todos los botones de navegación
+  nextBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      clearInterval(autoSlideInterval);
+      goToSlide((currentIndex + 1) % total);
+      startAutoSlide();
+    });
+  });
+
+  prevBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      clearInterval(autoSlideInterval);
+      goToSlide((currentIndex - 1 + total) % total);
+      startAutoSlide();
+    });
+  });
+
+  // Inicializar contadores y auto-slide
+  updateCounters();
+  startAutoSlide();
+
+  // Pausar auto-slide cuando el mouse está sobre el slider
+  slider.addEventListener("mouseenter", () => {
+    clearInterval(autoSlideInterval);
+  });
+
+  // Reanudar auto-slide cuando el mouse sale del slider
+  slider.addEventListener("mouseleave", () => {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+  });
+});

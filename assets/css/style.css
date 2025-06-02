@@ -26,7 +26,6 @@
 
   --ff-poppins: "Poppins", sans-serif;
   --ff-montserrat: "Montserrat", sans-serif;
-
   --fs-1: calc(20px + 3.5vw);
   --fs-2: calc(18px + 1.6vw);
   --fs-3: calc(16px + 0.45vw);
@@ -731,258 +730,154 @@ body {
 }
 
 /*-----------------------------------*\
- * #POPULAR
-\*-----------------------------------*/
-
-.popular {
-  padding-block: var(--section-padding);
-}
-
-.popular-list,
-.popular-list > li:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-.popular-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-25);
-  height: 430px;
-}
-
-.popular-card .card-img {
-  height: 100%;
-}
-
-.popular-card .card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.popular-card .card-content {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background: var(--white);
-  border-radius: var(--radius-25);
-  padding: 20px;
-}
-
-.popular-card .card-rating {
-  background: #f29f05;
-  color: var(--white);
-  position: absolute;
-  top: 0;
-  right: 25px;
-  display: flex;
-  align-items: center;
-  gap: 1px;
-  transform: translateY(-50%);
-  padding: 6px 10px;
-  border-radius: 20px;
-  font-size: 14px;
-}
-
-.popular-card .card-subtitle {
-  color: var(--blue-ncs);
-  font-size: var(--fs-6);
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.popular-card .card-title {
-  margin-bottom: 5px;
-}
-
-.popular-card :is(.card-subtitle, .card-title) > a {
-  color: inherit;
-}
-
-.popular .btn {
-  margin-inline: auto;
-}
-
-.popular-card .card-img img {
-  display: none;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.popular-card .card-img img.active {
-  display: block;
-}
-
-.card-controls button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 18px;
-  z-index: 10;
-}
-
-.card-controls .prev {
-  left: 10px;
-  background: var(--gunmetal);
-  color: var(--white);
-}
-
-.card-controls .next {
-  right: 10px;
-  background: var(--gunmetal);
-  color: var(--white);
-}
-
-/*-----------------------------------*\
  * #paquete
 \*-----------------------------------*/
 
-.paquete {
-  padding-block: var(--section-padding);
-}
-
-.paquete-list {
-  margin-bottom: 40px;
-  margin-top: 5px;
-}
-
-.paquete-list > li:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-.paquete-card {
-  background: var(--cultured);
+.romantic-slider-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  position: relative;
   overflow: hidden;
-  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-.paquete-card .card-banner {
-  height: 250px;
-}
-
-.paquete-card .card-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.paquete-card .card-content {
-  padding: 30px 20px;
-}
-
-.paquete-card .card-title {
-  margin-bottom: 15px;
-}
-
-.paquete-card .card-text {
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.card-meta-list {
-  background: #f3dfba;
-  max-width: max-content;
+.romantic-slider {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.15);
-  border-radius: 50px;
+  transition: transform 0.5s ease-in-out;
 }
 
-.card-meta-item {
+.romantic-slide {
+  min-width: 100%;
+  display: flex;
+  background-color: var(--white);
+}
+
+.romantic-slide-image {
+  flex: 1;
+  background-size: cover;
+  background-position: top;
+  min-height: 700px;
+  border-radius: 10%;
+}
+
+.romantic-slide-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
 }
 
-.card-meta-item:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  right: -1px;
-  bottom: 4px;
-  width: 1px;
-  background: hsla(0, 0%, 0%, 0.3);
+.romantic-slide-title {
+  font-size: 2.5rem;
+  color: var(--oxford-blue);
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-family: "Playfair Display", serif;
+  text-shadow: 0 8px 6px rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-.meta-box {
+.romantic-slide-description {
+  color: var(--black-coral);
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-family: var(--ff-montserrat);
+}
+
+.romantic-slide-price {
+  font-size: 1.8rem;
+  color: var(--blue-ncs);
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family: "Playfair Display", serif;
+  text-shadow: 0 8px 6px rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.romantic-slide-actions {
   display: flex;
-  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.romantic-btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.romantic-btn-primary {
+  background-color: var(--oxford-blue);
+  color: var(--white);
+  border: 2px solid var(--oxford-blue);
+}
+/********cambiar el efecto hover del boton de aqui*********/
+.romantic-btn-primary:hover {
+  background-color: var(--gunmetal);
+  border-color: var(--gunmetal);
+}
+
+.romantic-btn-secondary {
+  background-color: transparent;
+  color: var(--onyx);
+  font-size: 1.2rem;
+}
+
+.romantic-btn-secondary:hover {
+  background-color: var(--oxford-blue);
+  color: var(--white);
+}
+
+.romantic-slider-controls {
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.romantic-slider-nav {
+  display: flex;
   align-items: center;
   gap: 5px;
-  padding-inline: 9px;
-  color: var(--black-coral);
-  font-size: var(--fs-8);
 }
 
-.meta-box > ion-icon {
-  color: var(--bright-navy-blue);
-  font-size: 13px;
+.romantic-nav-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 1px solid var(--oxford-blue);
+  color: var(--oxford-blue);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.meta-box > i {
-  color: var(--bright-navy-blue);
-  font-size: 13px;
-}
-
-.paquete-card .card-price {
-  background: var(--gunmetal);
+.romantic-nav-btn:hover {
+  background-color: var(--oxford-blue);
   color: var(--white);
-  padding: 25px 20px;
+}
+
+.romantic-slider-count {
+  color: var(--black-coral);
+  font-weight: 600;
+  font-size: 16px;
+  min-width: 50px;
   text-align: center;
 }
-
-.paquete-card .card-price .wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 5px 15px;
-  margin-bottom: 10px;
+.romantic-total-slides,
+.romantic-current-slide {
+  display: inline;
 }
-
-.paquete-card .card-price .reviews {
-  font-size: var(--fs-5);
-}
-
-.paquete-card .card-rating {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1px;
-  font-size: 14px;
-}
-
-.paquete-card .card-rating ion-icon:last-child {
-  color: hsl(0, 0%, 80%);
-}
-
-.paquete-card .price {
-  font-size: var(--fs-2);
-  font-family: var(--ff-montserrat);
-  font-weight: var(--fw-800);
-  margin-bottom: 20px;
-}
-
-.paquete-card .price span {
-  font-size: var(--fs-7);
-  font-weight: initial;
-}
-
-.paquete .btn {
-  margin-inline: auto;
-}
-
-.card-controls button:hover {
-  background-color: #f29f05;
-}
-/***estilos
+/***estilos para el menu
  para el menu**/
 
 .menu-foot-container {
@@ -1066,42 +961,11 @@ body {
   border-radius: 10px;
 }
 /*-----------------------------------*\
- * #GALLERY
-\*-----------------------------------*/
-
-.gallery {
-  padding-block: var(--section-padding);
-}
-
-.gallery-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.gallery-image {
-  width: 100%;
-  height: 100%;
-  border-radius: var(--radius-15);
-  overflow: hidden;
-}
-
-.gallery-item:nth-child(3) {
-  grid-area: 1 / 2 / 3 / 3;
-}
-
-.gallery-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/*-----------------------------------*\
  * #CTA
 \*-----------------------------------*/
 .cta {
   position: relative;
-  background-image: url("../images/principal.jpg");
+  background-image: url("../images/habSuitEjecutiva/ReyPalacePics-08.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -1932,10 +1796,10 @@ address {
 }
 
 .libro-btn {
+  background-color: hsla(0, 96%, 10%, 0.315);
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: var(--oxford-blue);
   color: var(--white);
   border: none;
   cursor: pointer;
@@ -1945,11 +1809,13 @@ address {
   font-size: 1.2rem;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--white);
 }
 
 .libro-btn:hover {
-  background-color: var(--yale-blue);
+  background-color: var(--oxford-blue);
   transform: scale(1.1);
+  border: 2px solid var(--oxford-blue);
 }
 
 /* Contenido informativo al mismo nivel */
@@ -2491,6 +2357,31 @@ address {
 
   .servicios-grid {
     grid-template-columns: 1fr;
+  }
+  .romantic-slide {
+    flex-direction: column;
+  }
+
+  .romantic-slide-image {
+    min-height: 250px;
+  }
+
+  .romantic-slide-content {
+    padding: 25px;
+  }
+
+  .romantic-slide-title {
+    font-size: 2rem;
+  }
+
+  .romantic-slider-controls {
+    position: static;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  .romantic-slide-actions {
+    margin-bottom: 30px;
   }
 }
 
