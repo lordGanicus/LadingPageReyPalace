@@ -304,24 +304,10 @@ body {
   font-size: 20px;
 }
 
-.social-list {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
 .social-link {
-  color: var(--white);
-  padding: 8px;
-  border: 1px solid hsla(0, 0%, 100%, 0.3);
-  border-radius: 50%;
-  font-size: 15px;
-  transition: var(--transition);
-  overflow: visible;
-}
-
-.social-link:is(:hover, :focus) {
-  background: hsla(0, 0%, 100%, 0.2);
+  color: transparent;
+  border: 1px solid transparent;
+  visibility: hidden;
 }
 
 .header .navbar {
@@ -381,10 +367,11 @@ body {
   font-size: var(--fs-4-1);
   transition: var(--transition);
   text-transform: capitalize;
+  border-bottom: 2px solid transparent;
 }
 
 .navbar-link:is(:hover, :focus) {
-  color: var(--yale-blue);
+  color: var(--white);
   font-weight: 600;
   transform: scale(1.1);
 }
@@ -1112,10 +1099,33 @@ body {
 /*-----------------------------------*\
  * #CTA
 \*-----------------------------------*/
-
 .cta {
-  background: var(--bright-navy-blue);
+  position: relative;
+  background-image: url("../images/principal.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-block: var(--section-padding);
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* oscurece solo la imagen */
+  z-index: 1;
+}
+
+/* 👇 Esto asegura que el texto quede por encima */
+.cta > * {
+  position: relative;
+  z-index: 2;
 }
 
 .cta :is(.section-subtitle, .section-title, .section-text) {
@@ -1292,43 +1302,214 @@ address {
 /*-----------------------------------*\
  * #GO TO TOP
 \*-----------------------------------*/
-
-.go-top {
+/* ESTILOS GENERALES PARA LOS BOTONES FLOTANTES */
+.go-top,
+.social-flare-container {
   position: fixed;
-  bottom: 25px;
   right: 15px;
-  width: 40px;
-  height: 40px;
-  background-color: var(--white);
-  border: 1px solid var(--oxford-blue);
-  color: var(--black);
-  display: grid;
-  place-items: center;
-  font-size: 18px;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.5);
-  opacity: 1; /* Siempre visible */
-  transform: translateY(0); /* Sin desplazamiento inicial */
-  visibility: hidden; /* Siempre visible */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
-  margin-bottom: 2px;
-  overflow: visible; /* Importante para que no desborde */
+  z-index: 9999;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.go-top.whatsapp {
-  bottom: 70px;
-  height: 40px;
-  color: var(--whatssap-color);
+/* BOTÓN "IR ARRIBA" */
+.go-top {
+  bottom: 25px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--gunmetal), var(--yale-blue));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
-.go-top.active {
-  opacity: 0.8;
-  transform: translateY(0);
-  visibility: visible;
+
+.go-top:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, var(--oxford-blue), var(--yale-blue));
 }
-.go-top:is(:hover, :focus) {
-  transform: scale(1.1); /* Aumenta tamaño al pasar el mouse */
-  box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.5); /* Un poco más de sombra al hacer hover */
+
+/* CONTENEDOR PRINCIPAL REDES SOCIALES */
+.social-flare-container {
+  bottom: 90px;
+  height: 50px;
 }
+
+/* BOTÓN PRINCIPAL WHATSAPP */
+.social-trigger {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+.social-trigger:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* CONTENEDOR REDES SOCIALES SECUNDARIAS */
+.social-flare {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 15px;
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  pointer-events: none;
+}
+
+/* ICONOS DE REDES SOCIALES */
+.social-icon {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  transform: translateX(40px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 5;
+  text-decoration: none;
+}
+
+/* COLORES VIBRANTES PARA CADA RED SOCIAL */
+.facebook {
+  background: linear-gradient(135deg, #3b5998, #2d4373);
+}
+
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+}
+
+.tiktok {
+  background: linear-gradient(135deg, #000000, #661223);
+  background-size: 200% 200%;
+  animation: gradientTikTok 3s ease infinite;
+}
+
+/* EFECTO HOVER EN LOS ICONOS */
+.social-icon:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ANIMACIÓN CUANDO SE ACTIVA EL HOVER */
+.social-flare-container:hover .social-flare {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.social-flare-container:hover .social-icon {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* DELAYS PARA ANIMACIÓN EN CASCADA */
+.social-flare-container:hover .social-icon:nth-child(1) {
+  transition-delay: 0.4s;
+}
+.social-flare-container:hover .social-icon:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.social-flare-container:hover .social-icon:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.social-flare-container:hover .social-icon:nth-child(4) {
+  transition-delay: 0.1s;
+}
+
+/* EFECTO DE ONDA PULSANTE */
+.social-trigger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  z-index: -1;
+  opacity: 0;
+  transform: scale(1.3);
+  transition: all 0.4s ease;
+}
+
+.social-flare-container:hover .social-trigger::after {
+  opacity: 0.4;
+  transform: scale(1.8);
+}
+
+/* ANIMACIÓN ESPECIAL PARA TIKTOK */
+@keyframes gradientTikTok {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* EFECTO DE FLOTACIÓN CONSTANTE */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.social-trigger,
+.go-top {
+  animation: float 3s ease-in-out infinite;
+}
+
+.social-flare-container:hover .social-trigger {
+  animation: none;
+}
+
 /*-----------------------------------*\
  * Estilos para habitaciones
 \*-----------------------------------*/
@@ -1676,7 +1857,7 @@ address {
 .libro-inner {
   position: relative;
   width: 80%;
-  height: 70vh;
+  height: 80vh;
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
 }
@@ -1700,6 +1881,7 @@ address {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* Posicionamiento más pronunciado de las páginas laterales */
@@ -1925,11 +2107,7 @@ address {
   display: flex;
   width: 100%;
   padding: 5px;
-  background: linear-gradient(
-    to left,
-    var(--oxford-blue) 0%,
-    var(--gunmetal) 100%
-  );
+  background: linear-gradient(to left, var(--gainsboro) 0%, var(--white) 100%);
   gap: 30px;
 }
 

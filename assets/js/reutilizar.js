@@ -148,16 +148,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Función para actualizar los sliders
   function updateSliders(index) {
-    // Actualizar main slider
     mainSlides.forEach((slide) => slide.classList.remove("active"));
     mainSlides[index].classList.add("active");
 
-    // Actualizar mini slider
     miniSlides.forEach((slide) => slide.classList.remove("active"));
     miniSlides[index].classList.add("active");
 
-    // Scroll mini slider para mostrar la imagen activa
-    if (miniSlides[index]) {
+    // Solo hacer scroll si el slider está en pantalla
+    const sliderRect = mainSlider.getBoundingClientRect();
+    const inView =
+      sliderRect.top >= 0 &&
+      sliderRect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight);
+
+    if (miniSlides[index] && inView) {
       miniSlides[index].scrollIntoView({
         behavior: "smooth",
         block: "nearest",
@@ -311,9 +315,16 @@ document.addEventListener("DOMContentLoaded", function () {
     miniSlides.forEach((slide) => slide.classList.remove("active"));
     miniSlides[index].classList.add("active");
 
-    // Scroll manual dentro del mini-slider sin mover la página
-    const parent = miniSlides[index].parentElement;
-    if (parent) {
+    // Verificar si el mainSlider está visible en la pantalla
+    const sliderRect = mainSlider.getBoundingClientRect();
+    const isInView =
+      sliderRect.top >= 0 &&
+      sliderRect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight);
+
+    // Solo hacer scroll en mini-slider si el main slider está visible
+    if (isInView && miniSlides[index]) {
+      const parent = miniSlides[index].parentElement;
       const slideTop = miniSlides[index].offsetTop;
       parent.scrollTo({
         top: slideTop - 10, // Ajuste opcional
