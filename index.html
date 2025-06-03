@@ -28,6 +28,14 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
 
@@ -312,113 +320,147 @@
             </div>
           </div>
         </section>
+
         <!-- seccion restaurante -->
 
         <section class="restaurante">
           <div class="container">
-            <p class="section-subtitle">Descubre nuestra cocina</p>
+            <p id="section-subtitle">Experiencia Gastronómica</p>
 
-            <h2 class="h2 section-title">Sabor que enamora</h2>
+            <h2 id="section-title">Sabores Exquisitos</h2>
 
-            <p class="section-text">
-              En Gales Restaurant te ofrecemos una experiencia gastronómica
-              única, con platos cuidadosamente elaborados para deleitar tu
-              paladar en un ambiente acogedor.
+            <p id="section-text">
+              En Gales Restaurant te ofrecemos una experiencia culinaria
+              inolvidable, donde tradición y vanguardia se fusionan para crear
+              platos que deleitarán tus sentidos en un ambiente de elegancia y
+              sofisticación.
             </p>
-            <div class="restaurante-container" id="restaurante">
-              <!-- Slider estilo libro mejorado -->
-              <div class="libro-slider">
-                <div class="libro-inner" id="libroInner">
-                  <div class="pagina">
-                    <img
-                      src="assets/images/restaurante/GalesRest_ReyPalace-01.jpg"
-                      alt="Plato especial del restaurante"
-                    />
-                  </div>
-                  <div class="pagina">
-                    <img
-                      src="assets/images/restaurante/GalesRest_ReyPalace-04.jpg"
-                      alt="Bar del restaurante"
-                    />
-                  </div>
-                  <div class="pagina active">
-                    <img
-                      src="assets/images/restaurante/GalesRest_ReyPalace-16.jpg"
-                      alt="Interior del restaurante Gales"
-                    />
-                  </div>
-                  <div class="pagina">
-                    <img
-                      src="assets/images/restaurante/GalesRest_ReyPalace-23.jpg"
-                      alt="Terraza del restaurante"
-                    />
-                  </div>
-                  <div class="pagina">
-                    <img
-                      src="assets/images/restaurante/GalesRest_ReyPalace-24.jpg"
-                      alt="Chef preparando platos"
-                    />
+
+            <div class="restaurante-container">
+              <!-- Slider Moderno con Slick -->
+              <div class="restaurante-slider">
+                <div class="slider-item">
+                  <img
+                    src="assets/images/restaurante/GalesRest_ReyPalace-01.jpg"
+                    alt="Plato gourmet del chef"
+                  />
+                  <div class="slider-caption">
+                    <h3>Especialidad del Chef</h3>
+                    <p>
+                      Nuestro plato estrella preparado con ingredientes locales
+                      de la más alta calidad
+                    </p>
                   </div>
                 </div>
-
-                <div class="libro-controls">
-                  <button class="libro-btn" id="prevBtn1">
-                    <i class="fas fa-chevron-left"></i>
-                  </button>
-                  <button class="libro-btn" id="nextBtn1">
-                    <i class="fas fa-chevron-right"></i>
-                  </button>
+                <div class="slider-item">
+                  <img
+                    src="assets/images/restaurante/GalesRest_ReyPalace-04.jpg"
+                    alt="Bar de vinos exclusivos"
+                  />
+                  <div class="slider-caption">
+                    <h3>Bar Exclusivo</h3>
+                    <p>
+                      Selección premium de vinos nacionales e internacionales
+                      para acompañar tu comida
+                    </p>
+                  </div>
+                </div>
+                <div class="slider-item">
+                  <img
+                    src="assets/images/restaurante/GalesRest_ReyPalace-16.jpg"
+                    alt="Ambiente elegante del restaurante"
+                  />
+                  <div class="slider-caption">
+                    <h3>Ambiente Sofisticado</h3>
+                    <p>
+                      Diseño interior que combina modernidad y confort para una
+                      experiencia única
+                    </p>
+                  </div>
+                </div>
+                <div class="slider-item">
+                  <img
+                    src="assets/images/restaurante/GalesRest_ReyPalace-23.jpg"
+                    alt="Terraza con vistas privilegiadas"
+                  />
+                  <div class="slider-caption">
+                    <h3>Terraza Panorámica</h3>
+                    <p>
+                      Disfruta de nuestras especialidades con las mejores vistas
+                      de la ciudad
+                    </p>
+                  </div>
+                </div>
+                <div class="slider-item">
+                  <img
+                    src="assets/images/restaurante/GalesRest_ReyPalace-24.jpg"
+                    alt="Chef preparando platos artesanales"
+                  />
+                  <div class="slider-caption">
+                    <h3>Arte Culinario</h3>
+                    <p>
+                      Nuestros chefs preparan cada plato con dedicación y
+                      maestría
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <!-- Información del restaurante  -->
+              <!-- Información del restaurante -->
               <div class="restaurante-info">
                 <div class="info-content">
                   <h1 class="restaurante-titulo">GALES</h1>
                   <h2 class="restaurante-subtitulo">Restaurante</h2>
 
                   <p class="restaurante-descripcion">
-                    Fusionamos tradición y modernidad para ofrecerte platos
-                    exquisitos en un ambiente acogedor. Nuestro restaurante en
-                    La Paz es el lugar ideal para disfrutar de una exelente
-                    comida.
+                    En el corazón de La Paz, Gales Restaurant redefine la
+                    gastronomía boliviana con un toque contemporáneo. Nuestro
+                    menú, cuidadosamente diseñado por nuestro chef ejecutivo,
+                    presenta ingredientes locales reinterpretados con técnicas
+                    internacionales, ofreciendo una experiencia culinaria que
+                    celebra la riqueza de nuestra tierra.
                   </p>
 
                   <div class="restaurante-contacto">
                     <div class="contacto-item">
-                      <i
-                        class="fas fa-map-marker-alt"
+                      <a
                         href="https://maps.app.goo.gl/8cq4RrhfkkimLa8x6"
                         target="_blank"
-                      ></i>
-                      <span
-                        >Avenida 20 de octubre 1947 entre Landaeta y JJ Perez,
-                        La Paz, Bolivia</span
                       >
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span
+                          >Avenida 20 de octubre 1947 entre Landaeta y JJ Perez,
+                          La Paz, Bolivia</span
+                        >
+                      </a>
                     </div>
                     <div class="contacto-item">
-                      <i
-                        class="fas fa-phone-alt"
+                      <a
                         href="https://api.whatsapp.com/send/?phone=62430178&text=Hola%2C%20quiero%20hacer%20una%20reserva."
                         target="_blank"
-                      ></i>
-                      <span>+591 62430178</span>
+                      >
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+591 62430178</span>
+                      </a>
                     </div>
                     <div class="contacto-item">
-                      <i class="fas fa-envelope"></i>
-                      <span>info@restaurantgales.com</span>
+                      <a href="mailto:info@restaurantgales.com">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@restaurantgales.com</span>
+                      </a>
                     </div>
                   </div>
 
                   <div class="botones-container">
                     <a href="./index.html#menu-foot" class="info-btn btn-menu">
-                      <i class="fas fa-utensils"></i> VER MENÚ
+                      <i class="fas fa-utensils"></i> Ver Menú Completo
                     </a>
                     <a
                       href="https://api.whatsapp.com/send/?phone=62430178&text=Hola%2C%20quiero%20hacer%20una%20reserva%20del%20restaurante."
                       class="info-btn btn-reserva"
+                      target="_blank"
                     >
-                      <i class="fas fa-calendar-check"></i> RESERVAR MESA
+                      <i class="fas fa-calendar-check"></i> Reservar Mesa
                     </a>
                   </div>
                 </div>
@@ -426,6 +468,7 @@
             </div>
           </div>
         </section>
+
         <section class="salones" id="salones">
           <div class="container">
             <div class="otras-habitaciones">
@@ -1048,8 +1091,10 @@
     <!-- 
       - custom js link
     -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/reutilizar.js"></script>
+    <script src="./assets/js/JQueryjs.js"></script>
 
     <!-- 
       - ionicon link
@@ -1064,6 +1109,8 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
