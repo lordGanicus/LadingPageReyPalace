@@ -20,6 +20,7 @@
   --whatssap-color: #075e54;
   --color-blanco: #ffffff;
   --pr-romantic-primary: #d8a5a6; /* Rosado suave */
+
   /**
    * typography
    */
@@ -45,7 +46,7 @@
   /**
    * transition
    */
-
+  --transition2: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --transition: 0.25s ease-in-out;
 
   /**
@@ -188,19 +189,40 @@ body {
 }
 
 .section-subtitle {
-  color: var(--bright-navy-blue);
-  font-size: var(--fs-5);
   text-transform: uppercase;
   font-family: var(--ff-montserrat);
-  margin-bottom: 8px;
   text-align: center;
+  font-size: 1rem;
+  color: var(--oxford-blue);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  position: relative;
+  font-family: "Playfair Display", serif;
 }
 
 .section-title {
   margin-bottom: 15px;
+  position: relative;
   text-align: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  font-family: "Playfair Display", serif;
+  color: var(--onyx);
+  font-size: 3rem;
 }
-
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45%;
+  height: 2px;
+  background: linear-gradient(to right, #f6e27a, var(--oxford-blue));
+}
 .section-text {
   color: var(--black-coral);
   margin-bottom: 30px;
@@ -1973,24 +1995,6 @@ address {
   margin-bottom: 3rem;
 }
 
-.section-title {
-  font-size: 1.8rem;
-  color: var(--oxford-blue);
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-bottom: 10px;
-}
-
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: var(--united-nations-blue);
-}
-
 .amenidades-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -2584,6 +2588,374 @@ address {
 
   .restaurante .slider-caption h3 {
     font-size: 1.2rem;
+  }
+}
+/*******************salones inicio***********************/
+:root {
+  --gold: #d4af37;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Sección de Salones - Estilo Escalonado */
+.salones {
+  padding: 100px 0 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: right;
+  margin-bottom: 100px;
+  padding-right: 50px;
+  position: relative;
+}
+
+/* Grid de Salones - Efecto Escalonado */
+.salones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  position: relative;
+}
+
+/* Posicionamiento escalonado */
+.salon-card:nth-child(1) {
+  margin-top: 80px;
+}
+
+.salon-card:nth-child(2) {
+  margin-top: 40px;
+}
+
+.salon-card:nth-child(3) {
+  margin-top: 0;
+}
+
+.salon-card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+  position: relative;
+  transform-style: preserve-3d;
+  height: 450px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.salon-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.salon-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.salon-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.salon-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--gold), var(--oxford-blue));
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 1;
+}
+
+.salon-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+.salon-card:hover::before {
+  opacity: 0.1;
+}
+
+.salon-image {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.salon-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.salon-card:hover .salon-image img {
+  transform: scale(1.1);
+}
+
+.salones-grid .salon-info {
+  padding: 5px;
+  position: relative;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.salon-name {
+  font-size: 1.8rem;
+  color: var(--dark-gray);
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.salon-name::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold), var(--oxford-blue));
+  transition: var(--transition);
+}
+
+.salon-card:hover .salon-name::after {
+  width: 100%;
+}
+
+.salon-desc {
+  font-size: 0.95rem;
+  color: var(--medium-gray);
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.salon-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 25px;
+  background-color: var(--oxford-blue);
+  color: var(--white);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+
+.salon-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: var(--transition);
+}
+
+.salon-btn:hover {
+  background-color: var(--oxford-blue);
+  transform: translateX(5px);
+}
+
+.salon-btn:hover::before {
+  left: 100%;
+}
+
+.salon-btn i {
+  margin-left: 8px;
+  transition: var(--transition);
+}
+
+.salon-btn:hover i {
+  transform: translateX(3px);
+}
+
+/* Efecto de overlay lateral */
+.salon-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 3, 11, 0.274);
+  color: var(--white);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: var(--transition);
+  z-index: 2;
+}
+
+.salon-card:hover .salon-overlay {
+  left: 0;
+}
+
+.overlay-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-family: "Playfair Display", serif;
+  color: var(--gold);
+}
+
+.overlay-features {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.overlay-features li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.overlay-features li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.overlay-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--gold);
+  color: var(--white);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  width: fit-content;
+}
+
+.overlay-btn:hover {
+  background-color: var(--white);
+  color: var(--onyx);
+  transform: translateX(5px);
+}
+
+.overlay-btn i {
+  margin-left: 8px;
+}
+
+/* Línea diagonal decorativa */
+.diagonal-line {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.03),
+    rgba(58, 146, 204, 0.03)
+  );
+  z-index: -1;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .salones-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .salon-card {
+    margin-top: 0 !important;
+    margin-bottom: 30px;
+  }
+
+  .diagonal-line {
+    width: 80%;
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .salones {
+    padding: 70px 0;
+  }
+
+  .section-header {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 60px;
+  }
+
+  .section-header::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .section-text {
+    margin: 0 auto;
+  }
+
+  .diagonal-line {
+    width: 100%;
+    clip-path: none;
+    opacity: 0.05;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .salon-card {
+    height: auto;
+  }
+
+  .salon-overlay {
+    position: relative;
+    left: 0;
+    background: var(--dark-blue);
+    display: none;
+  }
+
+  .salon-card:hover .salon-overlay {
+    display: flex;
   }
 }
 /*****salones******/

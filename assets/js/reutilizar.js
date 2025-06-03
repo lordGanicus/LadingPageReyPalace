@@ -437,3 +437,25 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   }).mount();
 });
+/*******Salones*******/
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".salon-card");
+
+  function checkScroll() {
+    cards.forEach((card) => {
+      const cardTop = card.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (cardTop < windowHeight - 100) {
+        card.style.animationPlayState = "running";
+      }
+    });
+  }
+
+  // Verificar al cargar
+  checkScroll();
+
+  // Verificar al hacer scroll
+  window.addEventListener("scroll", checkScroll);
+});

@@ -190,13 +190,14 @@
 
           <div class="time"></div>
         </div>
+
         <section class="habitaciones" id="habitaciones">
           <div class="container">
             <!-- Otras habitaciones -->
             <div class="otras-habitaciones">
               <p class="section-subtitle">Descubre nuestras habitaciones</p>
 
-              <h2 class="h2 section-title">Comodidad que inspira</h2>
+              <h2 class="section-title">Comodidad Que Inspira</h2>
 
               <p class="section-text">
                 Nuestras habitaciones están diseñadas para brindarte descanso,
@@ -323,7 +324,7 @@
 
         <!-- seccion restaurante -->
 
-        <section class="restaurante">
+        <section class="restaurante" id="restaurante">
           <div class="container">
             <p id="section-subtitle">Experiencia Gastronómica</p>
 
@@ -468,87 +469,119 @@
             </div>
           </div>
         </section>
-
+        <!--
+          Salones
+          -->
         <section class="salones" id="salones">
+          <div class="diagonal-line"></div>
           <div class="container">
-            <div class="otras-habitaciones">
-              <p class="section-subtitle">Descubre nuestros salones</p>
-
-              <h2 class="h2 section-title">
+            <div class="section-header">
+              <p class="section-subtitle">DESCUBRE NUESTROS SALONES</p>
+              <h2 class="section-title">
                 Espacios que se adaptan a tus eventos
               </h2>
-
               <p class="section-text">
                 Nuestros salones están pensados para ofrecer versatilidad,
                 elegancia y todos los servicios necesarios para hacer de tu
                 evento una experiencia inolvidable.
               </p>
-              <div class="habitaciones-grid">
-                <div class="habitacion-card">
-                  <div class="habitacion-imagen">
-                    <img
-                      src="assets/images/arturo/02.jpg"
-                      alt="Habitación Simple"
-                    />
-                  </div>
-                  <div class="habitacion-info">
-                    <h3 class="habitacion-nombre">Salon Rey Arturo</h3>
-                    <p class="habitacion-desc">
-                      Salón de eventos versátil y elegante, ideal para
-                      celebraciones como cumpleaños, bodas, graduaciones,
-                      eventos corporativos y más.
-                    </p>
-                    <a
-                      href="./salonArturo.html"
-                      target="_blank"
-                      class="habitacion-btn"
-                      >Ver más</a
-                    >
-                  </div>
+            </div>
+
+            <div class="salones-grid">
+              <!-- Salón 1 - Rey Arturo (derecha) -->
+              <div class="salon-card">
+                <div class="salon-image">
+                  <img
+                    src="assets/images/arturo/02.jpg"
+                    alt="Salón Rey Arturo"
+                  />
+                </div>
+                <div class="salon-info">
+                  <h3 class="salon-name">Salón Rey Arturo</h3>
+                  <p class="salon-desc">
+                    Salón de eventos versátil y elegante, ideal para
+                    celebraciones como cumpleaños, bodas, graduaciones, eventos
+                    corporativos y más.
+                  </p>
+                  <a href="./salonArturo.html" class="salon-btn">
+                    Ver más <i class="fas fa-arrow-right"></i>
+                  </a>
                 </div>
 
-                <div class="habitacion-card">
-                  <div class="habitacion-imagen">
-                    <img
-                      src="assets/images/york/01.jpg"
-                      alt="Habitación Doble"
-                    />
-                  </div>
-                  <div class="habitacion-info">
-                    <h3 class="habitacion-nombre">Salon York</h3>
-                    <p class="habitacion-desc">
-                      Un espacio moderno y acogedor, perfecto para eventos
-                      sociales o corporativos.
-                    </p>
-                    <a
-                      href="./salonYork.html"
-                      target="_blank"
-                      class="habitacion-btn"
-                      >Ver más</a
-                    >
-                  </div>
+                <div class="salon-overlay">
+                  <h3 class="overlay-title">Salón Rey Arturo</h3>
+                  <ul class="overlay-features">
+                    <li>Capacidad para 200 personas</li>
+                    <li>Sistema de sonido profesional</li>
+                    <li>Iluminación adaptable</li>
+                    <li>Catering disponible</li>
+                    <li>Amplio espacio para baile</li>
+                  </ul>
+                  <a href="./salonArturo.html" class="overlay-btn">
+                    Ver más <i class="fas fa-calendar-check"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Salón 2 - York (centro) -->
+              <div class="salon-card">
+                <div class="salon-image">
+                  <img src="assets/images/york/01.jpg" alt="Salón York" />
+                </div>
+                <div class="salon-info">
+                  <h3 class="salon-name">Salón York</h3>
+                  <p class="salon-desc">
+                    Un espacio moderno y acogedor, perfecto para eventos
+                    sociales o corporativos con un toque de sofisticación.
+                  </p>
+                  <a href="./salonYork.html" class="salon-btn">
+                    Ver más <i class="fas fa-arrow-right"></i>
+                  </a>
                 </div>
 
-                <div class="habitacion-card">
-                  <div class="habitacion-imagen">
-                    <img
-                      src="assets/images/gales/01 (1).jpg"
-                      alt="Habitación Triple"
-                    />
-                  </div>
-                  <div class="habitacion-info">
-                    <h3 class="habitacion-nombre">Salon Gales</h3>
-                    <p class="habitacion-desc">
-                      Ideal para almuerzos, cenas privadas y celebraciones
-                      especiales en un ambiente cálido y elegante.
-                    </p>
-                    <a
-                      href="./salonGales.html"
-                      target="_blank"
-                      class="habitacion-btn"
-                      >Ver más</a
-                    >
-                  </div>
+                <div class="salon-overlay">
+                  <h3 class="overlay-title">Salón York</h3>
+                  <ul class="overlay-features">
+                    <li>Capacidad para 120 personas</li>
+                    <li>Pantalla HD y proyector</li>
+                    <li>Diseño modular adaptable</li>
+                    <li>WiFi de alta velocidad</li>
+                    <li>Bar privado</li>
+                  </ul>
+                  <a href="./salonYork.html" class="overlay-btn">
+                    Ver más <i class="fas fa-calendar-check"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Salón 3 - Gales (izquierda) -->
+              <div class="salon-card">
+                <div class="salon-image">
+                  <img src="assets/images/gales/01 (1).jpg" alt="Salón Gales" />
+                </div>
+                <div class="salon-info">
+                  <h3 class="salon-name">Salón Gales</h3>
+                  <p class="salon-desc">
+                    Ideal para almuerzos, cenas privadas y celebraciones
+                    especiales en un ambiente cálido y elegante.
+                  </p>
+                  <a href="./salonGales.html" class="salon-btn">
+                    Ver más <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+
+                <div class="salon-overlay">
+                  <h3 class="overlay-title">Salón Gales</h3>
+                  <ul class="overlay-features">
+                    <li>Capacidad íntima para 50 personas</li>
+                    <li>Ambiente climatizado</li>
+                    <li>Mesa presidencial</li>
+                    <li>Servicio de camareros</li>
+                    <li>Menú degustación disponible</li>
+                  </ul>
+                  <a href="./salonGales.html" class="overlay-btn">
+                    Ver más <i class="fas fa-calendar-check"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -562,7 +595,7 @@
         <section class="paquete" id="paquete">
           <div class="container">
             <p class="section-subtitle">promociones populares</p>
-            <h2 class="h2 section-title">Consulte nuestras promociones</h2>
+            <h2 class="section-title">Consulte Nuestras Promociones</h2>
             <p class="section-text"></p>
             <div class="romantic-slider-container">
               <div class="romantic-slider">
@@ -932,7 +965,7 @@
           <div class="container">
             <p class="section-subtitle">Restaurant</p>
 
-            <h2 class="h2 section-title">Menu del dia</h2>
+            <h2 class="section-title">Menú Del Día</h2>
             <div class="container menu-foot-container">
               <div class="menu-info">
                 <h4 class="section-subtitle">Restaurant & Cafetería</h4>
@@ -1016,7 +1049,7 @@
   -->
     <section class="paquete" id="maps">
       <div class="container">
-        <h2 class="h2 section-title">Ubicación del hotel</h2>
+        <h2 class="section-title">Ubicación Del Hotel</h2>
         <p class="section-text">
           Hotel Rey Palace Av. 20 de Octubre y Landaeta, a una cuadra de la
           plaza del estudiante. N° 1947
