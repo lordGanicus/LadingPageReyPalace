@@ -492,7 +492,8 @@ document.addEventListener("DOMContentLoaded", function () {
     interval: 6000,
     pauseOnHover: false,
     pauseOnFocus: false,
-    speed: 1000,
+    speed: 1200, // Transición más lenta y suave
+    easing: "ease-in-out", // Suaviza entrada y salida
     arrows: true,
     pagination: true,
     classes: {
