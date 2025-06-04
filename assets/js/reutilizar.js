@@ -45,17 +45,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const header = document.querySelector("[data-header]");
   const goTopBtn = document.querySelector("[data-go-top]");
-  const goWhatsBtn = document.querySelector("[data-go-whatsapp]");
 
   window.addEventListener("scroll", function () {
     if (window.scrollY >= 200) {
       header.classList.add("active");
       goTopBtn.classList.add("active");
-      goWhatsBtn.classList.add("active");
     } else {
       header.classList.remove("active");
       goTopBtn.classList.remove("active");
-      goWhatsBtn.classList.remove("active");
     }
   });
 
@@ -133,329 +130,331 @@ document.addEventListener("DOMContentLoaded", async () => {
     },
   });
 });
-
-/************************slider para las habitaciones */
 document.addEventListener("DOMContentLoaded", function () {
-  const mainSlider = document.getElementById("mainSlider");
-  const mainSlides = document.querySelectorAll(".main-slide");
-  const miniSlides = document.querySelectorAll(".mini-slide");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
+  try {
+    const mainSlider = document.getElementById("mainSlider");
+    const mainSlides = document.querySelectorAll(".main-slide");
+    const miniSlides = document.querySelectorAll(".mini-slide");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
 
-  let currentIndex = 0;
-  const slideCount = mainSlides.length;
-  let slideInterval;
+    if (
+      mainSlider &&
+      mainSlides.length > 0 &&
+      miniSlides.length > 0 &&
+      prevBtn &&
+      nextBtn
+    ) {
+      let currentIndex = 0;
+      const slideCount = mainSlides.length;
+      let slideInterval;
 
-  // Función para actualizar los sliders
-  function updateSliders(index) {
-    mainSlides.forEach((slide) => slide.classList.remove("active"));
-    mainSlides[index].classList.add("active");
+      function updateSliders(index) {
+        mainSlides.forEach((slide) => slide.classList.remove("active"));
+        mainSlides[index].classList.add("active");
 
-    miniSlides.forEach((slide) => slide.classList.remove("active"));
-    miniSlides[index].classList.add("active");
+        miniSlides.forEach((slide) => slide.classList.remove("active"));
+        miniSlides[index].classList.add("active");
 
-    // Solo hacer scroll si el slider está en pantalla
-    const sliderRect = mainSlider.getBoundingClientRect();
-    const inView =
-      sliderRect.top >= 0 &&
-      sliderRect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight);
+        const sliderRect = mainSlider.getBoundingClientRect();
+        const inView =
+          sliderRect.top >= 0 &&
+          sliderRect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight);
 
-    if (miniSlides[index] && inView) {
-      miniSlides[index].scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "center",
+        if (miniSlides[index] && inView) {
+          miniSlides[index].scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+            inline: "center",
+          });
+        }
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateSliders(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateSliders(currentIndex);
+      }
+
+      nextBtn.addEventListener("click", nextSlide);
+      prevBtn.addEventListener("click", prevSlide);
+
+      miniSlides.forEach((slide, index) => {
+        slide.addEventListener("click", () => {
+          currentIndex = index;
+          updateSliders(currentIndex);
+        });
+      });
+
+      function startSlideShow() {
+        slideInterval = setInterval(nextSlide, 5000);
+      }
+
+      function stopSlideShow() {
+        clearInterval(slideInterval);
+      }
+
+      startSlideShow();
+
+      mainSlider.addEventListener("mouseenter", stopSlideShow);
+      mainSlider.addEventListener("mouseleave", startSlideShow);
+
+      document
+        .querySelector(".mini-slider-container")
+        ?.addEventListener("mouseenter", stopSlideShow);
+      document
+        .querySelector(".mini-slider-container")
+        ?.addEventListener("mouseleave", startSlideShow);
+
+      window.addEventListener("resize", function () {
+        updateSliders(currentIndex);
       });
     }
+  } catch (error) {
+    console.error("Error en slider de habitaciones:", error);
   }
-
-  // Función para avanzar al siguiente slide
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slideCount;
-    updateSliders(currentIndex);
-  }
-
-  // Función para retroceder al slide anterior
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-    updateSliders(currentIndex);
-  }
-
-  // Event listeners para los botones
-  nextBtn.addEventListener("click", nextSlide);
-  prevBtn.addEventListener("click", prevSlide);
-
-  // Event listeners para los mini slides
-  miniSlides.forEach((slide, index) => {
-    slide.addEventListener("click", () => {
-      currentIndex = index;
-      updateSliders(currentIndex);
-    });
-  });
-
-  // Auto slide
-  function startSlideShow() {
-    slideInterval = setInterval(nextSlide, 5000);
-  }
-
-  function stopSlideShow() {
-    clearInterval(slideInterval);
-  }
-
-  // Iniciar el slideshow
-  startSlideShow();
-
-  // Pausar al interactuar
-  mainSlider.addEventListener("mouseenter", stopSlideShow);
-  mainSlider.addEventListener("mouseleave", startSlideShow);
-
-  // Pausar al interactuar con mini slider
-  document
-    .querySelector(".mini-slider-container")
-    .addEventListener("mouseenter", stopSlideShow);
-  document
-    .querySelector(".mini-slider-container")
-    .addEventListener("mouseleave", startSlideShow);
-
-  // Actualizar al cambiar tamaño de ventana
-  window.addEventListener("resize", function () {
-    updateSliders(currentIndex);
-  });
-  /********** */
 });
+
 /**************slider para salones */
 document.addEventListener("DOMContentLoaded", function () {
-  const mainSlider = document.getElementById("mainSlider");
-  const mainSlides = document.querySelectorAll(".main-slide");
-  const miniSlides = document.querySelectorAll(".mini-slide");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
+  try {
+    const mainSlider = document.getElementById("mainSlider");
+    const mainSlides = document.querySelectorAll(".main-slide");
+    const miniSlides = document.querySelectorAll(".mini-slide");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
 
-  let currentIndex = 0;
-  const slideCount = mainSlides.length;
-  let slideInterval;
+    if (
+      mainSlider &&
+      mainSlides.length > 0 &&
+      miniSlides.length > 0 &&
+      prevBtn &&
+      nextBtn
+    ) {
+      let currentIndex = 0;
+      const slideCount = mainSlides.length;
+      let slideInterval;
 
-  // Función para actualizar los sliders
-  function updateSliders(index) {
-    // Actualizar main slider
-    mainSlides.forEach((slide) => slide.classList.remove("active"));
-    mainSlides[index].classList.add("active");
+      function updateSliders(index) {
+        mainSlides.forEach((slide) => slide.classList.remove("active"));
+        mainSlides[index].classList.add("active");
 
-    // Actualizar mini slider
-    miniSlides.forEach((slide) => slide.classList.remove("active"));
-    miniSlides[index].classList.add("active");
+        miniSlides.forEach((slide) => slide.classList.remove("active"));
+        miniSlides[index].classList.add("active");
 
-    // Verificar si el mainSlider está visible en la pantalla
-    const sliderRect = mainSlider.getBoundingClientRect();
-    const isInView =
-      sliderRect.top >= 0 &&
-      sliderRect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight);
+        const sliderRect = mainSlider.getBoundingClientRect();
+        const isInView =
+          sliderRect.top >= 0 &&
+          sliderRect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight);
 
-    // Solo hacer scroll en mini-slider si el main slider está visible
-    if (isInView && miniSlides[index]) {
-      const parent = miniSlides[index].parentElement;
-      const slideTop = miniSlides[index].offsetTop;
-      parent.scrollTo({
-        top: slideTop - 10, // Ajuste opcional
-        behavior: "smooth",
+        if (isInView && miniSlides[index]) {
+          const parent = miniSlides[index].parentElement;
+          const slideTop = miniSlides[index].offsetTop;
+          parent.scrollTo({
+            top: slideTop - 10,
+            behavior: "smooth",
+          });
+        }
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateSliders(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateSliders(currentIndex);
+      }
+
+      nextBtn.addEventListener("click", nextSlide);
+      prevBtn.addEventListener("click", prevSlide);
+
+      miniSlides.forEach((slide, index) => {
+        slide.addEventListener("click", () => {
+          currentIndex = index;
+          updateSliders(currentIndex);
+        });
+      });
+
+      function startSlideShow() {
+        slideInterval = setInterval(nextSlide, 5000);
+      }
+
+      function stopSlideShow() {
+        clearInterval(slideInterval);
+      }
+
+      startSlideShow();
+
+      mainSlider.addEventListener("mouseenter", stopSlideShow);
+      mainSlider.addEventListener("mouseleave", startSlideShow);
+
+      document
+        .querySelector(".mini-slider-vertical")
+        ?.addEventListener("mouseenter", stopSlideShow);
+      document
+        .querySelector(".mini-slider-vertical")
+        ?.addEventListener("mouseleave", startSlideShow);
+
+      window.addEventListener("resize", function () {
+        updateSliders(currentIndex);
       });
     }
+  } catch (error) {
+    console.error("Error en slider de salones:", error);
   }
-
-  // Función para avanzar al siguiente slide
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slideCount;
-    updateSliders(currentIndex);
-  }
-
-  // Función para retroceder al slide anterior
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-    updateSliders(currentIndex);
-  }
-
-  // Event listeners para los botones
-  nextBtn.addEventListener("click", nextSlide);
-  prevBtn.addEventListener("click", prevSlide);
-
-  // Event listeners para los mini slides
-  miniSlides.forEach((slide, index) => {
-    slide.addEventListener("click", () => {
-      currentIndex = index;
-      updateSliders(currentIndex);
-    });
-  });
-
-  // Auto slide
-  function startSlideShow() {
-    slideInterval = setInterval(nextSlide, 5000);
-  }
-
-  function stopSlideShow() {
-    clearInterval(slideInterval);
-  }
-
-  // Iniciar el slideshow
-  startSlideShow();
-
-  // Pausar al interactuar
-  mainSlider.addEventListener("mouseenter", stopSlideShow);
-  mainSlider.addEventListener("mouseleave", startSlideShow);
-
-  // Pausar al interactuar con mini slider
-  document
-    .querySelector(".mini-slider-vertical")
-    .addEventListener("mouseenter", stopSlideShow);
-  document
-    .querySelector(".mini-slider-vertical")
-    .addEventListener("mouseleave", startSlideShow);
-
-  // Actualizar al cambiar tamaño de ventana
-  window.addEventListener("resize", function () {
-    updateSliders(currentIndex);
-  });
 });
 
 /***********Slider para los paquetes en la seccion de index*************/
 document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.querySelector(".romantic-slider");
-  const slides = document.querySelectorAll(".romantic-slide");
-  const prevBtns = document.querySelectorAll(".romantic-prev-btn");
-  const nextBtns = document.querySelectorAll(".romantic-next-btn");
-  const currentSlides = document.querySelectorAll(".romantic-current-slide");
-  const totalSlides = document.querySelector(".romantic-total-slides");
+  try {
+    const slider = document.querySelector(".romantic-slider");
+    const slides = document.querySelectorAll(".romantic-slide");
+    const prevBtns = document.querySelectorAll(".romantic-prev-btn");
+    const nextBtns = document.querySelectorAll(".romantic-next-btn");
+    const currentSlides = document.querySelectorAll(".romantic-current-slide");
+    const totalSlides = document.querySelector(".romantic-total-slides");
 
-  let currentIndex = 0;
-  const total = slides.length;
-  let autoSlideInterval;
-  const slideDuration = 5000; // 5 segundos
+    if (
+      slider &&
+      slides.length > 0 &&
+      prevBtns.length > 0 &&
+      nextBtns.length > 0
+    ) {
+      let currentIndex = 0;
+      const total = slides.length;
+      let autoSlideInterval;
+      const slideDuration = 5000;
 
-  // Función para iniciar el auto-slide
-  function startAutoSlide() {
-    autoSlideInterval = setInterval(() => {
-      goToSlide((currentIndex + 1) % total);
-    }, slideDuration);
-  }
-
-  // Función para ir a un slide específico
-  function goToSlide(index) {
-    currentIndex = index;
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-    updateCounters();
-  }
-
-  // Actualizar todos los contadores de slides
-  function updateCounters() {
-    currentSlides.forEach((counter) => {
-      counter.textContent = currentIndex + 1;
-    });
-    if (totalSlides) {
-      totalSlides.textContent = total;
-    }
-  }
-
-  // Configurar eventos para todos los botones de navegación
-  nextBtns.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      clearInterval(autoSlideInterval);
-      goToSlide((currentIndex + 1) % total);
-      startAutoSlide();
-    });
-  });
-
-  prevBtns.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      clearInterval(autoSlideInterval);
-      goToSlide((currentIndex - 1 + total) % total);
-      startAutoSlide();
-    });
-  });
-
-  // Inicializar contadores y auto-slide
-  updateCounters();
-  startAutoSlide();
-
-  // Pausar auto-slide cuando el mouse está sobre el slider
-  slider.addEventListener("mouseenter", () => {
-    clearInterval(autoSlideInterval);
-  });
-
-  // Reanudar auto-slide cuando el mouse sale del slider
-  slider.addEventListener("mouseleave", () => {
-    clearInterval(autoSlideInterval);
-    startAutoSlide();
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Crear pétalos decorativos
-  const petalsContainer = document.getElementById("petals");
-  for (let i = 0; i < 12; i++) {
-    const petal = document.createElement("div");
-    petal.classList.add("pr-petal");
-
-    // Tamaño aleatorio
-    const size = Math.random() * 20 + 15;
-    petal.style.width = `${size}px`;
-    petal.style.height = `${size}px`;
-
-    // Posición aleatoria
-    petal.style.left = `${Math.random() * 100}%`;
-    petal.style.bottom = `-${size}px`;
-
-    // Duración y delay aleatorio
-    petal.style.animationDuration = `${Math.random() * 10 + 10}s`;
-    petal.style.animationDelay = `${Math.random() * 5}s`;
-
-    // Opacidad aleatoria
-    petal.style.opacity = Math.random() * 0.5 + 0.3;
-
-    petalsContainer.appendChild(petal);
-  }
-
-  // Inicializar Splide
-  new Splide(".splide", {
-    type: "fade",
-    rewind: true,
-    autoplay: true,
-    interval: 6000,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    speed: 1200, // Transición más lenta y suave
-    easing: "ease-in-out", // Suaviza entrada y salida
-    arrows: true,
-    pagination: true,
-    classes: {
-      arrows: "splide__arrows",
-      arrow: "splide__arrow",
-      prev: "splide__arrow--prev",
-      next: "splide__arrow--next",
-      pagination: "splide__pagination",
-      page: "splide__pagination__page",
-    },
-  }).mount();
-});
-/*******Salones*******/
-
-document.addEventListener("DOMContentLoaded", function () {
-  const cards = document.querySelectorAll(".salon-card");
-
-  function checkScroll() {
-    cards.forEach((card) => {
-      const cardTop = card.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-
-      if (cardTop < windowHeight - 100) {
-        card.style.animationPlayState = "running";
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+          goToSlide((currentIndex + 1) % total);
+        }, slideDuration);
       }
-    });
+
+      function goToSlide(index) {
+        currentIndex = index;
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateCounters();
+      }
+
+      function updateCounters() {
+        currentSlides.forEach((counter) => {
+          counter.textContent = currentIndex + 1;
+        });
+        if (totalSlides) {
+          totalSlides.textContent = total;
+        }
+      }
+
+      nextBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          clearInterval(autoSlideInterval);
+          goToSlide((currentIndex + 1) % total);
+          startAutoSlide();
+        });
+      });
+
+      prevBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          clearInterval(autoSlideInterval);
+          goToSlide((currentIndex - 1 + total) % total);
+          startAutoSlide();
+        });
+      });
+
+      updateCounters();
+      startAutoSlide();
+
+      slider.addEventListener("mouseenter", () => {
+        clearInterval(autoSlideInterval);
+      });
+
+      slider.addEventListener("mouseleave", () => {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+      });
+    }
+  } catch (error) {
+    console.error("Error en slider romántico:", error);
   }
+});
 
-  // Verificar al cargar
-  checkScroll();
+document.addEventListener("DOMContentLoaded", function () {
+  try {
+    const petalsContainer = document.getElementById("petals");
+    if (petalsContainer) {
+      for (let i = 0; i < 12; i++) {
+        const petal = document.createElement("div");
+        petal.classList.add("pr-petal");
 
-  // Verificar al hacer scroll
-  window.addEventListener("scroll", checkScroll);
+        const size = Math.random() * 20 + 15;
+        petal.style.width = `${size}px`;
+        petal.style.height = `${size}px`;
+        petal.style.left = `${Math.random() * 100}%`;
+        petal.style.bottom = `-${size}px`;
+        petal.style.animationDuration = `${Math.random() * 10 + 10}s`;
+        petal.style.animationDelay = `${Math.random() * 5}s`;
+        petal.style.opacity = Math.random() * 0.5 + 0.3;
+
+        petalsContainer.appendChild(petal);
+      }
+    }
+
+    if (document.querySelector(".splide")) {
+      new Splide(".splide", {
+        type: "fade",
+        rewind: true,
+        autoplay: true,
+        interval: 6000,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        speed: 1200,
+        easing: "ease-in-out",
+        arrows: true,
+        pagination: true,
+        classes: {
+          arrows: "splide__arrows",
+          arrow: "splide__arrow",
+          prev: "splide__arrow--prev",
+          next: "splide__arrow--next",
+          pagination: "splide__pagination",
+          page: "splide__pagination__page",
+        },
+      }).mount();
+    }
+  } catch (error) {
+    console.error("Error en efectos decorativos:", error);
+  }
+});
+
+/*******Salones*******/
+document.addEventListener("DOMContentLoaded", function () {
+  try {
+    const cards = document.querySelectorAll(".salon-card");
+    if (cards.length > 0) {
+      function checkScroll() {
+        cards.forEach((card) => {
+          const cardTop = card.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+
+          if (cardTop < windowHeight - 100) {
+            card.style.animationPlayState = "running";
+          }
+        });
+      }
+
+      checkScroll();
+      window.addEventListener("scroll", checkScroll);
+    }
+  } catch (error) {
+    console.error("Error en animación de salones:", error);
+  }
 });

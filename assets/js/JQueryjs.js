@@ -1,3 +1,4 @@
+/********************** */
 $(document).ready(function () {
   // Inicializar Slick Slider
   $(".restaurante-slider").slick({

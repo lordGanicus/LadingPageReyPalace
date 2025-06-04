@@ -1468,7 +1468,12 @@ body {
 /*-----------------------------------*\
  * #FOOTER
 \*-----------------------------------*/
-
+.footer .container {
+  max-width: 90%;
+}
+.footer .container .footer-top {
+  margin: 3rem;
+}
 .footer-top {
   background: var(--gunmetal);
   padding-block: var(--section-padding);
@@ -1477,6 +1482,7 @@ body {
 
 .footer-brand {
   margin-bottom: 30px;
+  margin-left: 10px;
 }
 
 .footer-brand img {
@@ -1494,6 +1500,7 @@ body {
 
 .footer-contact {
   margin-bottom: 30px;
+  margin-left: 10px;
 }
 
 .contact-title {
@@ -2015,24 +2022,25 @@ address {
   text-align: center;
 }
 
-.amenidad-text {
-  color: var(--black-coral);
-}
-
 .amenidad-text.available {
   color: #333;
   font-weight: 500;
 }
-
+.habitacionesDescripcion {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.habitacionesDescripcion:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
 /* Descripción */
 .descripcion-section {
-  background: var(--cultured);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  border-radius: 12px;
   line-height: 1.8;
-  font-family: var(--ff-montserrat);
+  font-family: "Lato", sans-serif;
   font-size: 1.5rem;
+  color: #2c2c2c;
+  transition: all 0.3s ease;
 }
 
 /* Otras habitaciones */
@@ -2079,18 +2087,24 @@ address {
 }
 
 .habitacion-nombre {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--oxford-blue);
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: inline-block;
+  position: relative;
+  font-family: "Playfair Display", serif;
 }
 
 .habitacion-desc {
-  color: var(--color-plomo);
-  margin-bottom: 1rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  font-size: 1.2rem;
+  color: #777777;
+  margin-bottom: 40px;
+  max-width: 600px;
+  font-family: "Playfair Display", serif;
+  text-align: justify;
 }
 
 .habitacion-btn {
@@ -3030,7 +3044,7 @@ address {
   justify-content: space-between;
   padding: 0 20px;
   transform: translateY(-50%);
-  z-index: 10;
+  z-index: 1;
 }
 
 .slider-btn {
@@ -3918,13 +3932,13 @@ address {
     max-width: 80%;
     left: 40%;
     transform: translateX(-50%);
-    padding-right: 30%;
+    padding-right: 20%;
     box-sizing: border-box;
     color: var(--white);
     text-shadow: 0 5px 10px #0004;
   }
   .carousel .list .item .des {
-    font-size: 1.5em;
+    font-size: 1.9em;
 
     line-height: 1.3em;
   }
@@ -3971,10 +3985,17 @@ address {
    */
 
   .footer-top .container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 2fr);
     gap: 50px;
+    display: flex;
+    justify-content: center;
   }
-
+  .footer-top .footer-contact {
+    margin-left: 5rem;
+  }
+  .footer-bottom .container {
+    margin-left: 2rem;
+  }
   .footer-form {
     grid-column: unset;
   }
