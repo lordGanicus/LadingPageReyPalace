@@ -3429,6 +3429,281 @@ address {
     font-size: 1.2rem;
   }
 }
+/***Restaurante***/
+
+.hero {
+  background-image: url("../images/restaurante/GalesRest_ReyPalace-01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed; /* Esto mantiene la imagen fija */
+  background-color: hsla(0, 3%, 14%, 0.623);
+  background-blend-mode: overlay;
+  display: grid;
+  place-items: center;
+  height: 60vh;
+  text-align: center;
+}
+
+.hero-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 3rem;
+}
+
+.section-text-hero {
+  color: var(--white);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Estilos base */
+/* Estilos base (nombres cambiados) */
+.gourmet-body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+  line-height: 1.6;
+}
+
+.gourmet-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.gourmet-main-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #5e3023;
+  position: relative;
+  font-weight: 700;
+}
+
+.gourmet-main-title:after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #c57b57;
+  margin: 20px auto 0;
+}
+
+/* Estructura de servicios (nombres cambiados) */
+.gourmet-service-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* Servicio 1 (Desayuno Buffet) - Izquierda */
+.gourmet-service-1 {
+  grid-column: 1 / span 8;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+}
+
+.gourmet-service-1 .gourmet-slider {
+  width: 55%;
+  margin-right: -10%;
+  z-index: 2;
+}
+
+.gourmet-service-1 .gourmet-content {
+  width: 55%;
+  margin-left: auto;
+  padding: 30px 30px 30px 15%;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+/* Servicio 2 (Almuerzo Ejecutivo) - Derecha */
+.gourmet-service-2 {
+  grid-column: 5 / span 8;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  margin-top: -80px;
+}
+
+.gourmet-service-2 .gourmet-slider {
+  width: 55%;
+  margin-left: -10%;
+  z-index: 2;
+  order: 2;
+}
+
+.gourmet-service-2 .gourmet-content {
+  width: 55%;
+  margin-right: auto;
+  padding: 30px 15% 30px 30px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+  order: 1;
+}
+
+/* Servicio 3 (Platos a la carta) - Izquierda */
+.gourmet-service-3 {
+  grid-column: 1 / span 8;
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  margin-top: -80px;
+}
+
+.gourmet-service-3 .gourmet-slider {
+  width: 55%;
+  margin-right: -10%;
+  z-index: 2;
+}
+
+.gourmet-service-3 .gourmet-content {
+  width: 55%;
+  margin-left: auto;
+  padding: 30px 30px 30px 15%;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+/* Servicio 4 (Catering) - Derecha */
+.gourmet-service-4 {
+  grid-column: 5 / span 8;
+  grid-row: 4;
+  display: flex;
+  align-items: center;
+  margin-top: -80px;
+}
+
+.gourmet-service-4 .gourmet-slider {
+  width: 55%;
+  margin-left: -10%;
+  z-index: 2;
+  order: 2;
+}
+
+.gourmet-service-4 .gourmet-content {
+  width: 55%;
+  margin-right: auto;
+  padding: 30px 15% 30px 30px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+  order: 1;
+}
+
+/* Servicio 5 (Bar) - Izquierda */
+.gourmet-service-5 {
+  grid-column: 1 / span 8;
+  grid-row: 5;
+  display: flex;
+  align-items: center;
+  margin-top: -80px;
+}
+
+.gourmet-service-5 .gourmet-slider {
+  width: 55%;
+  margin-right: -10%;
+  z-index: 2;
+}
+
+.gourmet-service-5 .gourmet-content {
+  width: 55%;
+  margin-left: auto;
+  padding: 30px 30px 30px 15%;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+/* Estilos comunes (nombres cambiados) */
+.gourmet-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: #5e3023;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.gourmet-description {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.gourmet-schedule {
+  font-weight: 500;
+  color: #c57b57;
+  margin-bottom: 20px;
+}
+
+.gourmet-btn {
+  display: inline-block;
+  background: #5e3023;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.gourmet-btn:hover {
+  background: #7a3f2d;
+  transform: translateY(-2px);
+}
+
+.gourmet-slide {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+}
+
+.gourmet-slider {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive (nombres cambiados) */
+@media (max-width: 1024px) {
+  .gourmet-service-grid {
+    display: block;
+  }
+
+  .gourmet-service-1,
+  .gourmet-service-2,
+  .gourmet-service-3,
+  .gourmet-service-4,
+  .gourmet-service-5 {
+    margin: 0 0 40px 0 !important;
+    display: block;
+  }
+
+  .gourmet-slider,
+  .gourmet-content {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    order: initial !important;
+  }
+
+  .gourmet-slide {
+    height: 300px !important;
+  }
+}
+/*termina restaurante*/
 /****************termina salones***************/
 /* Responsive */
 @media (max-width: 1200px) {
@@ -3606,11 +3881,6 @@ address {
   /**
    * HERO
    */
-
-  .hero {
-    min-height: 800px;
-    padding-top: 85px;
-  }
 
   .hero-text {
     --fs-5: 15px;

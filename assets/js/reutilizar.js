@@ -458,3 +458,19 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Error en animación de salones:", error);
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  // Inicialización de todos los sliders
+  const sliders = document.querySelectorAll(".splide");
+
+  sliders.forEach((slider) => {
+    new Splide(slider, {
+      type: "fade",
+      rewind: true,
+      autoplay: true,
+      interval: 5000,
+      arrows: false,
+      pagination: false,
+      height: "350px",
+    }).mount();
+  });
+});
