@@ -3480,7 +3480,7 @@ address {
   font-size: 2.8rem;
   text-align: center;
   margin-bottom: 50px;
-  color: #5e3023;
+  color: var(--oxford-blue);
   position: relative;
   font-weight: 700;
 }
@@ -3517,14 +3517,12 @@ address {
   margin-right: -10%;
   z-index: 2;
   border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-    /* sombra principal */ inset 0 5px 10px rgba(255, 255, 255, 0.4),
-    /* brillo interno */ inset 0 -5px 10px rgba(0, 0, 0, 0.1); /* sombra interna inferior */
-  background: radial-gradient(
-    circle at 30% 30%,
-    #ffffff,
-    #e0e0e0
-  ); /* efecto de luz suave */
+  background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35),
+    /* sombra proyectada en el "piso" */ inset 0 8px 12px
+      rgba(255, 255, 255, 0.5),
+    /* brillo interno superior */ inset 0 -6px 10px rgba(0, 0, 0, 0.2); /* sombra interna inferior */
+  position: relative;
 }
 
 .gourmet-service-1 .gourmet-content {
@@ -3532,7 +3530,7 @@ address {
   margin-left: auto;
   padding: 30px 30px 30px 15%;
   background: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
   z-index: 1;
 }
 
@@ -3552,10 +3550,12 @@ address {
   z-index: 2;
   order: 2;
   border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-    /* sombra principal */ inset 0 5px 10px rgba(255, 255, 255, 0.4),
-    /* brillo interno */ inset 0 -5px 10px rgba(0, 0, 0, 0.1); /* sombra interna inferior */
   background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35),
+    /* sombra proyectada en el "piso" */ inset 0 8px 12px
+      rgba(255, 255, 255, 0.5),
+    /* brillo interno superior */ inset 0 -6px 10px rgba(0, 0, 0, 0.2); /* sombra interna inferior */
+  position: relative;
 }
 
 .gourmet-service-2 .gourmet-content {
@@ -3563,7 +3563,7 @@ address {
   margin-right: auto;
   padding: 30px 15% 30px 30px;
   background: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
   order: 1;
 }
 
@@ -3582,10 +3582,12 @@ address {
   margin-right: -10%;
   z-index: 2;
   border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-    /* sombra principal */ inset 0 5px 10px rgba(255, 255, 255, 0.4),
-    /* brillo interno */ inset 0 -5px 10px rgba(0, 0, 0, 0.1); /* sombra interna inferior */
   background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35),
+    /* sombra proyectada en el "piso" */ inset 0 8px 12px
+      rgba(255, 255, 255, 0.5),
+    /* brillo interno superior */ inset 0 -6px 10px rgba(0, 0, 0, 0.2); /* sombra interna inferior */
+  position: relative;
 }
 
 .gourmet-service-3 .gourmet-content {
@@ -3593,7 +3595,7 @@ address {
   margin-left: auto;
   padding: 30px 30px 30px 15%;
   background: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
   z-index: 1;
 }
 
@@ -3613,10 +3615,12 @@ address {
   z-index: 2;
   order: 2;
   border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-    /* sombra principal */ inset 0 5px 10px rgba(255, 255, 255, 0.4),
-    /* brillo interno */ inset 0 -5px 10px rgba(0, 0, 0, 0.1); /* sombra interna inferior */
   background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35),
+    /* sombra proyectada en el "piso" */ inset 0 8px 12px
+      rgba(255, 255, 255, 0.5),
+    /* brillo interno superior */ inset 0 -6px 10px rgba(0, 0, 0, 0.2); /* sombra interna inferior */
+  position: relative;
 }
 
 .gourmet-service-4 .gourmet-content {
@@ -3624,7 +3628,7 @@ address {
   margin-right: auto;
   padding: 30px 15% 30px 30px;
   background: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
   order: 1;
 }
 
@@ -3643,10 +3647,12 @@ address {
   margin-right: -10%;
   z-index: 2;
   border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-    /* sombra principal */ inset 0 5px 10px rgba(255, 255, 255, 0.4),
-    /* brillo interno */ inset 0 -5px 10px rgba(0, 0, 0, 0.1); /* sombra interna inferior */
   background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35),
+    /* sombra proyectada en el "piso" */ inset 0 8px 12px
+      rgba(255, 255, 255, 0.5),
+    /* brillo interno superior */ inset 0 -6px 10px rgba(0, 0, 0, 0.2); /* sombra interna inferior */
+  position: relative;
 }
 
 .gourmet-service-5 .gourmet-content {
@@ -3654,7 +3660,7 @@ address {
   margin-left: auto;
   padding: 30px 30px 30px 15%;
   background: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
   z-index: 1;
 }
 
@@ -3662,39 +3668,47 @@ address {
 .gourmet-title {
   font-family: "Playfair Display", serif;
   font-size: 1.6rem;
-  color: #5e3023;
+  color: var(--oxford-blue);
   margin-bottom: 15px;
   font-weight: 700;
+  text-align: center;
 }
 
 .gourmet-description {
   margin-bottom: 20px;
-  color: #555;
+  color: var(--onyx);
   text-align: justify;
 }
 
 .gourmet-schedule {
   font-weight: 500;
-  color: #c57b57;
+  color: var(--blue-ncs);
   margin-bottom: 20px;
 }
 
 .gourmet-btn {
-  display: inline-block;
-  background: #5e3023;
-  color: white;
-  padding: 12px 30px;
-  border-radius: 4px;
+  display: flex;
+  background: linear-gradient(135deg, #5e3023, #7a3f2d);
+  color: #fff8f0;
+  padding: 14px 36px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: "Georgia", serif;
+  font-size: 1rem;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+  margin-left: 3rem;
 }
 
 .gourmet-btn:hover {
-  background: #7a3f2d;
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #7a3f2d, #5e3023);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
 .gourmet-slide {
