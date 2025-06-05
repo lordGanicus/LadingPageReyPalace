@@ -3465,7 +3465,7 @@ address {
   padding: 0;
   font-family: "Poppins", sans-serif;
   color: #333;
-  background-color: #f8f8f8;
+  background-color: var(white);
   line-height: 1.6;
 }
 
@@ -3509,12 +3509,22 @@ address {
   grid-row: 1;
   display: flex;
   align-items: center;
+  margin-right: 10%;
 }
 
 .gourmet-service-1 .gourmet-slider {
   width: 55%;
   margin-right: -10%;
   z-index: 2;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+    /* sombra principal */ inset 0 5px 10px rgba(255, 255, 255, 0.4),
+    /* brillo interno */ inset 0 -5px 10px rgba(0, 0, 0, 0.1); /* sombra interna inferior */
+  background: radial-gradient(
+    circle at 30% 30%,
+    #ffffff,
+    #e0e0e0
+  ); /* efecto de luz suave */
 }
 
 .gourmet-service-1 .gourmet-content {
@@ -3533,6 +3543,7 @@ address {
   display: flex;
   align-items: center;
   margin-top: -80px;
+  margin-left: 10%;
 }
 
 .gourmet-service-2 .gourmet-slider {
@@ -3540,6 +3551,11 @@ address {
   margin-left: -10%;
   z-index: 2;
   order: 2;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+    /* sombra principal */ inset 0 5px 10px rgba(255, 255, 255, 0.4),
+    /* brillo interno */ inset 0 -5px 10px rgba(0, 0, 0, 0.1); /* sombra interna inferior */
+  background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0);
 }
 
 .gourmet-service-2 .gourmet-content {
@@ -3548,7 +3564,6 @@ address {
   padding: 30px 15% 30px 30px;
   background: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  z-index: 1;
   order: 1;
 }
 
@@ -3559,12 +3574,18 @@ address {
   display: flex;
   align-items: center;
   margin-top: -80px;
+  margin-right: 10%;
 }
 
 .gourmet-service-3 .gourmet-slider {
   width: 55%;
   margin-right: -10%;
   z-index: 2;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+    /* sombra principal */ inset 0 5px 10px rgba(255, 255, 255, 0.4),
+    /* brillo interno */ inset 0 -5px 10px rgba(0, 0, 0, 0.1); /* sombra interna inferior */
+  background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0);
 }
 
 .gourmet-service-3 .gourmet-content {
@@ -3583,6 +3604,7 @@ address {
   display: flex;
   align-items: center;
   margin-top: -80px;
+  margin-left: 10%;
 }
 
 .gourmet-service-4 .gourmet-slider {
@@ -3590,6 +3612,11 @@ address {
   margin-left: -10%;
   z-index: 2;
   order: 2;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+    /* sombra principal */ inset 0 5px 10px rgba(255, 255, 255, 0.4),
+    /* brillo interno */ inset 0 -5px 10px rgba(0, 0, 0, 0.1); /* sombra interna inferior */
+  background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0);
 }
 
 .gourmet-service-4 .gourmet-content {
@@ -3598,7 +3625,6 @@ address {
   padding: 30px 15% 30px 30px;
   background: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  z-index: 1;
   order: 1;
 }
 
@@ -3609,12 +3635,18 @@ address {
   display: flex;
   align-items: center;
   margin-top: -80px;
+  margin-right: 10%;
 }
 
 .gourmet-service-5 .gourmet-slider {
   width: 55%;
   margin-right: -10%;
   z-index: 2;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+    /* sombra principal */ inset 0 5px 10px rgba(255, 255, 255, 0.4),
+    /* brillo interno */ inset 0 -5px 10px rgba(0, 0, 0, 0.1); /* sombra interna inferior */
+  background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0);
 }
 
 .gourmet-service-5 .gourmet-content {
@@ -3629,7 +3661,7 @@ address {
 /* Estilos comunes (nombres cambiados) */
 .gourmet-title {
   font-family: "Playfair Display", serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #5e3023;
   margin-bottom: 15px;
   font-weight: 700;
@@ -3638,6 +3670,7 @@ address {
 .gourmet-description {
   margin-bottom: 20px;
   color: #555;
+  text-align: justify;
 }
 
 .gourmet-schedule {
