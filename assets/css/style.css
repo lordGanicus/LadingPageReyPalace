@@ -1424,7 +1424,203 @@ body {
     bottom: 1.5rem;
   }
 }
-/********actualizar*********/
+/********parte complementaria de cenas romanticas*********/
+.romantic-dinner-menu {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #fff9f9 0%, #fff0f0 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.1);
+  border: 1px solid #ffebee;
+  font-family: "Playfair Display", serif;
+}
+
+.romantic-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.romantic-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 300;
+}
+
+.romantic-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.divider-line {
+  height: 1px;
+  width: 100px;
+  background-color: #e0e0e0;
+}
+
+.divider-icon {
+  margin: 0 15px;
+  color: #d23669;
+  font-size: 1.2rem;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.menu-category {
+  background-color: #fafafa;
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 3px solid var(--oxford-blue);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.category-icon {
+  font-size: 1.2rem;
+  color: var(--oxford-blue);
+  background: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+.category-title {
+  font-size: 1.3rem;
+  color: #444;
+  margin: 0;
+  font-weight: 500;
+}
+
+.pr-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.pr-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.pr-feature.full-width {
+  grid-column: 1 / -1;
+}
+
+.pr-feature-icon {
+  font-size: 1rem;
+  color: var(--onyx);
+  background: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+.pr-feature-text {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.pr-feature-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+  display: flex;
+  gap: 12px;
+  border: 1px solid #f5f5f5;
+}
+
+.pr-feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-color: #eee;
+}
+
+.pr-feature-content {
+  flex: 1;
+}
+
+.dish-name {
+  font-size: 1.05rem;
+  color: #333;
+  margin: 0 0 6px 0;
+  font-weight: 500;
+}
+
+.dish-description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 300;
+}
+
+.menu-note {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-note i {
+  color: var(--oxford-blue);
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .romantic-dinner-menu {
+    padding: 20px;
+  }
+
+  .romantic-title {
+    font-size: 1.5rem;
+  }
+
+  .pr-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/*******************************/
 /*-----------------------------------*\
  * #CTA
 \*-----------------------------------*/
