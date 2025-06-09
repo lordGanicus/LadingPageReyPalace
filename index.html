@@ -1,13 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel Rey Palace</title>
+    <title>
+      Hotel Rey Palace - Elegancia y Confort en el Corazón de La Paz
+    </title>
+    <!-- Meta tags existentes -->
+    <meta
+      name="description"
+      content="Hotel Rey Palace - Elegante hospedaje en el centro de La Paz. Habitaciones de lujo, restaurante gourmet y salones para eventos. Perfecto para viajeros exigentes y eventos empresariales."
+    />
+    <meta
+      name="keywords"
+      content="hotel la paz, hotel centro la paz, hospedaje elegante, hotel negocios, hotel turismo, suites la paz, restaurante gourmet la paz, salones eventos la paz"
+    />
+    <meta name="author" content="Hotel Rey Palace" />
+
+    <!-- Open Graph / Social Media -->
+    <meta
+      property="og:title"
+      content="Hotel Rey Palace - Hospedaje Elegante en el Centro de La Paz"
+    />
+    <meta
+      property="og:description"
+      content="Descubre el confort y elegancia en el corazón de La Paz. Habitaciones de lujo, gastronomía exquisita y salones para eventos memorables."
+    />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/KgStjjw/principal.jpg"
+    />
+    <meta property="og:url" content="https://hotelreypalace.com" />
+    <!-- Cambiar dominio cuando se tenga-->
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Hotel Rey Palace - La mejor experiencia en La Paz"
+    />
+    <meta
+      name="twitter:description"
+      content="Elegante hospedaje en el centro de La Paz para viajeros exigentes y eventos empresariales."
+    />
     <link
       rel="shortcut icon"
       href="./assets/images/favicon.jpg"
-      type="image/jpg+xml"
+      type="image/jpg"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,6 +77,52 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
     />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "Hotel Rey Palace",
+        "description": "Elegante hotel en el centro de La Paz para viajeros exigentes y eventos empresariales.",
+        "url": "https://hotelreypalace.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Avenida 20 de octubre 1947 entre Landaeta y JJ Perez",
+          "addressLocality": "La Paz",
+          "addressCountry": "Bolivia"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-16.505672110306282",
+          "longitude": "-68.13119798041603"
+        },
+        "starRating": {
+          "@type": "Rating",
+          "ratingValue": "3"
+        },
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "WiFi gratuito" },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Restaurante gourmet"
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Salones para eventos"
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Servicio a la habitación 24/7"
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Estacionamiento privado"
+          }
+        ],
+        "image": ["https://i.ibb.co/KgStjjw/principal.jpg"],
+        "priceRange": "$$",
+        "telephone": "+59173501495"
+      }
+    </script>
   </head>
 
   <body id="top">
@@ -57,10 +143,10 @@
           <!-- list item -->
           <div class="list">
             <div class="item">
-              <img src="assets/images/hab1.1.jpg" />
+              <img src="assets/images/hab1.1.jpg" alt="Elegancia y confort" />
               <div class="content">
                 <div class="author">REY PALACE</div>
-                <div class="title">Habitaciones de Ensueño en</div>
+                <div class="title">Elegancia y Confort</div>
                 <div class="topic">el Corazón de La Paz</div>
                 <div class="des">
                   Descubre el descanso perfecto en nuestras habitaciones
@@ -83,7 +169,10 @@
               </div>
             </div>
             <div class="item">
-              <img src="assets/images/paquetes-1.jpg" />
+              <img
+                src="assets/images/paquetes-1.jpg"
+                alt="La mejor Hospitalidad"
+              />
               <div class="content">
                 <div class="author">REY PALACE</div>
                 <div class="title">Vive La Paz con la</div>
@@ -105,7 +194,10 @@
               </div>
             </div>
             <div class="item">
-              <img src="assets/images/restaurante1.1.jpg" />
+              <img
+                src="assets/images/restaurante1.1.jpg"
+                alt="Nuestro restaurante"
+              />
               <div class="content">
                 <div class="author">REY PALACE</div>
                 <div class="title">Sabores que Enamoran en</div>
@@ -128,7 +220,7 @@
               </div>
             </div>
             <div class="item">
-              <img src="assets/images/salon1.1.png" />
+              <img src="assets/images/salon1.1.png" alt="Salones Elegantes" />
               <div class="content">
                 <div class="author">REY PALACE</div>
                 <div class="title">Salones Elegantes para:</div>
@@ -153,7 +245,7 @@
           <!-- list thumnail -->
           <div class="thumbnail">
             <div class="item">
-              <img src="assets/images/hab1.1.jpg" />
+              <img src="assets/images/hab1.1.jpg" alt="Habitaciones" />
               <div class="content">
                 <div class="title">Habitaciones</div>
                 <div class="description">Comodidad y descanso</div>
@@ -162,8 +254,8 @@
             <div class="item">
               <img src="assets/images/paquetes-1.jpg" />
               <div class="content">
-                <div class="title">Relax</div>
-                <div class="description">Paisajes y confort</div>
+                <div class="title">Rincón de Relax</div>
+                <div class="description">Comodidad total</div>
               </div>
             </div>
             <div class="item">
@@ -195,9 +287,9 @@
           <div class="container">
             <!-- Otras habitaciones -->
             <div class="otras-habitaciones">
-              <p class="section-subtitle">Descubre nuestras habitaciones</p>
+              <h1 class="section-subtitle">Hotel Rey Palace</h1>
 
-              <h2 class="section-title">Comodidad Que Inspira</h2>
+              <h2 class="section-title">Habitaciones de Lujo en La Paz</h2>
 
               <p class="section-text">
                 Nuestras habitaciones están diseñadas para brindarte descanso,
@@ -351,7 +443,10 @@
           <div class="container">
             <p id="section-subtitle">Experiencia Gastronómica</p>
 
-            <h2 id="section-title">Sabores Exquisitos</h2>
+            <h2 id="section-title">
+              Restaurante Gourmet en el <br />
+              Centro de La Paz
+            </h2>
 
             <p id="section-text">
               En Gales Restaurant te ofrecemos una experiencia culinaria
@@ -361,7 +456,6 @@
             </p>
 
             <div class="restaurante-container">
-              <!-- Slider Moderno con Slick -->
               <div class="restaurante-slider">
                 <div class="slider-item">
                   <img
@@ -501,7 +595,7 @@
             <div class="section-header">
               <p class="section-subtitle">DESCUBRE NUESTROS SALONES</p>
               <h2 class="section-title">
-                Espacios que se adaptan a tus eventos
+                Salones para Eventos Empresariales y Sociales
               </h2>
               <p class="section-text">
                 Nuestros salones están pensados para ofrecer versatilidad,
@@ -1102,6 +1196,52 @@
     <!-- 
     - #MAPS
   -->
+    <!-- Sección sobre ubicación  
+    <section class="about-location">
+      <h2>Hotel en el Mejor Sector de La Paz</h2>
+      <p>
+        Nuestro hotel está estratégicamente ubicado en el corazón de La Paz, a
+        solo pasos de:
+      </p>
+      <ul>
+        <li>Centros financieros y corporativos</li>
+        <li>Atractivos turísticos principales</li>
+        <li>Zonas comerciales y de entretenimiento</li>
+        <li>Transporte público y accesos principales</li>
+      </ul>
+      <p>
+        Ideal para viajeros de negocios que necesitan conectividad y turistas
+        que desean explorar la ciudad.
+      </p>
+    </section>-->
+
+    <!-- Sección para viajeros de negocios 
+    <section class="business-travelers">
+      <h2>Servicios Exclusivos para Viajeros de Negocios</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-wifi"></i>
+          <h3>WiFi de Alta Velocidad</h3>
+          <p>
+            Conexión estable en todas las áreas del hotel para tus videollamadas
+            y trabajo remoto.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-desktop"></i>
+          <h3>Centro de Negocios</h3>
+          <p>
+            Área equipada con computadoras, impresora y scanner a tu
+            disposición.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-clock"></i>
+          <h3>Check-in/out Flexible</h3>
+          <p>Adaptamos nuestros horarios según tus necesidades de viaje.</p>
+        </div>
+      </div>
+    </section>-->
     <section class="paquete" id="maps">
       <div class="container">
         <h2 class="section-title">Ubicación Del Hotel</h2>
