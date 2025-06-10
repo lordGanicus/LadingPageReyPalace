@@ -1319,111 +1319,6 @@ body {
   box-shadow: 0 15px 30px rgba(183, 110, 121, 0.4);
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
-  .pr-slide {
-    height: 60vh;
-    min-height: 500px;
-  }
-}
-
-@media (max-width: 992px) {
-  .pr-title {
-    font-size: 3rem;
-  }
-
-  .pr-slide {
-    height: 50vh;
-    min-height: 400px;
-  }
-
-  .pr-slide-title {
-    font-size: 2.5rem;
-  }
-
-  .pr-plan-card {
-    padding: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .pr-title {
-    font-size: 2.5rem;
-  }
-
-  .pr-slide {
-    height: 40vh;
-    min-height: 350px;
-  }
-
-  .pr-slide-overlay {
-    padding: 1.5rem;
-  }
-
-  .pr-slide-title {
-    font-size: 2rem;
-  }
-
-  .pr-slide-desc {
-    font-size: 1rem;
-  }
-
-  .splide__arrow {
-    width: 45px;
-    height: 45px;
-  }
-
-  .pr-plan-price {
-    font-size: 2rem;
-  }
-
-  .pr-reserve-btn {
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .pr-container {
-    padding: 1.5rem;
-  }
-
-  .pr-title {
-    font-size: 2rem;
-  }
-
-  .pr-slide {
-    height: 35vh;
-    min-height: 300px;
-    border-radius: 15px;
-  }
-
-  .pr-slide-title {
-    font-size: 1.5rem;
-  }
-
-  .pr-plan-card {
-    padding: 1.5rem;
-    margin-top: -50px;
-  }
-
-  .pr-plan-price {
-    font-size: 1.8rem;
-  }
-
-  .pr-features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .splide__arrows {
-    bottom: 1rem;
-    right: 1rem;
-  }
-
-  .splide__pagination {
-    bottom: 1.5rem;
-  }
-}
 /********parte complementaria de cenas romanticas*********/
 .romantic-dinner-menu {
   max-width: 1200px;
@@ -1603,30 +1498,13 @@ body {
   font-size: 1rem;
 }
 
-@media (max-width: 768px) {
-  .romantic-dinner-menu {
-    padding: 20px;
-  }
-
-  .romantic-title {
-    font-size: 1.5rem;
-  }
-
-  .pr-features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-}
 /*******************************/
 /*-----------------------------------*\
  * #CTA
 \*-----------------------------------*/
 .cta {
   position: relative;
-  background-image: url("../images/habSuitEjecutiva/ReyPalacePics-08.jpg");
+  background-image: url("https://res.cloudinary.com/ds9subkxg/image/upload/v1749574479/ReyPalacePics-08_lo4th2.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -2716,90 +2594,7 @@ address {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-  .restaurante .restaurante-container {
-    flex-direction: column;
-  }
 
-  .restaurante .restaurante-slider,
-  .restaurante .restaurante-info {
-    flex: 1 1 100%;
-    width: 100%;
-  }
-
-  .restaurante .section-title {
-    font-size: 2.5rem;
-  }
-
-  .restaurante .restaurante-titulo {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .restaurante {
-    padding: 60px 0;
-  }
-
-  .restaurante .section-title {
-    font-size: 2rem;
-  }
-
-  .restaurante .restaurante-titulo {
-    font-size: 2.5rem;
-  }
-
-  .restaurante .restaurante-info {
-    padding: 30px;
-  }
-
-  .restaurante .slider-item {
-    height: 400px;
-  }
-
-  .restaurante .botones-container {
-    flex-direction: column;
-  }
-
-  .restaurante .info-btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 576px) {
-  .restaurante .section-subtitle {
-    font-size: 1rem;
-  }
-
-  .restaurante .section-title {
-    font-size: 1.8rem;
-  }
-
-  .restaurante .section-text {
-    font-size: 1rem;
-  }
-
-  .restaurante .restaurante-titulo {
-    font-size: 2rem;
-  }
-
-  .restaurante .restaurante-subtitulo {
-    font-size: 1.2rem;
-  }
-
-  .restaurante .slider-item {
-    height: 300px;
-  }
-
-  .restaurante .slider-caption {
-    padding: 20px;
-  }
-
-  .restaurante .slider-caption h3 {
-    font-size: 1.2rem;
-  }
-}
 /*******************salones inicio***********************/
 :root {
   --gold: #d4af37;
@@ -3098,76 +2893,6 @@ address {
   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-  .salones-grid {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .salon-card {
-    margin-top: 0 !important;
-    margin-bottom: 30px;
-  }
-
-  .diagonal-line {
-    width: 80%;
-    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
-  }
-}
-
-@media (max-width: 768px) {
-  .salones {
-    padding: 70px 0;
-  }
-
-  .section-header {
-    text-align: center;
-    padding-right: 0;
-    margin-bottom: 60px;
-  }
-
-  .section-header::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .section-text {
-    margin: 0 auto;
-  }
-
-  .diagonal-line {
-    width: 100%;
-    clip-path: none;
-    opacity: 0.05;
-  }
-
-  .section-title {
-    font-size: 2.3rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .salon-card {
-    height: auto;
-  }
-
-  .salon-overlay {
-    position: relative;
-    left: 0;
-    background: var(--dark-blue);
-    display: none;
-  }
-
-  .salon-card:hover .salon-overlay {
-    display: flex;
-  }
-}
 /*****salones******/
 #salones {
   padding-top: 5rem;
@@ -3524,111 +3249,11 @@ address {
 }
 
 /* Responsive */
-@media (max-width: 1200px) {
-  .imagenes-container {
-    flex-direction: column;
-    padding: 30px;
-  }
 
-  .slider-principal,
-  .mini-slider-vertical {
-    width: 100%;
-  }
-
-  .mini-slider-vertical {
-    flex-direction: row;
-    max-height: none;
-    overflow-x: auto;
-    padding-right: 0;
-    padding-bottom: 10px;
-  }
-
-  .mini-slide {
-    flex: 0 0 150px;
-    height: 100px;
-  }
-
-  .slider-grande {
-    height: 400px;
-  }
-
-  .info-container {
-    padding: 0 30px 30px 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .salon-titulo {
-    font-size: 2.2rem;
-  }
-
-  .botones-container {
-    flex-direction: column;
-  }
-
-  .info-btn {
-    width: 100%;
-  }
-
-  .servicios-grid {
-    grid-template-columns: 1fr;
-  }
-  .romantic-slide {
-    flex-direction: column;
-  }
-
-  .romantic-slide-image {
-    min-height: 250px;
-  }
-
-  .romantic-slide-content {
-    padding: 25px;
-  }
-
-  .romantic-slide-title {
-    font-size: 2rem;
-  }
-
-  .romantic-slider-controls {
-    position: static;
-    justify-content: flex-end;
-    margin-top: 20px;
-  }
-
-  .romantic-slide-actions {
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 576px) {
-  .slider-grande {
-    height: 300px;
-  }
-
-  .mini-slide {
-    flex: 0 0 120px;
-    height: 80px;
-  }
-
-  .salon-titulo {
-    font-size: 1.8rem;
-  }
-
-  .imagenes-container,
-  .info-container {
-    padding: 20px;
-  }
-
-  .slider-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-}
 /***Restaurante***/
 
 .hero {
-  background-image: url("../images/restaurante/GalesRest_ReyPalace-01.jpg");
+  background-image: url("https://res.cloudinary.com/ds9subkxg/image/upload/v1749575227/GalesRest_ReyPalace-01_if1lnq.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -3920,138 +3545,12 @@ address {
 }
 
 /* Responsive (nombres cambiados) */
-@media (max-width: 1024px) {
-  .gourmet-service-grid {
-    display: block;
-  }
 
-  .gourmet-service-1,
-  .gourmet-service-2,
-  .gourmet-service-3,
-  .gourmet-service-4,
-  .gourmet-service-5 {
-    margin: 0 0 40px 0 !important;
-    display: block;
-  }
-
-  .gourmet-slider,
-  .gourmet-content {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 20px !important;
-    order: initial !important;
-  }
-
-  .gourmet-slide {
-    height: 300px !important;
-  }
-}
 /*termina restaurante*/
 /****************termina salones***************/
 /* Responsive */
-@media (max-width: 1200px) {
-  .restaurante-container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .libro-slider,
-  .restaurante-info {
-    width: 100%;
-    height: auto;
-    padding: 50px 0;
-  }
-
-  .libro-inner {
-    height: 60vh;
-  }
-
-  .restaurante-titulo {
-    font-size: 3.5rem;
-  }
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .mini-slide {
-    flex: 0 0 calc(33.333% - 7px);
-  }
-}
-
-@media (max-width: 768px) {
-  .habitacion-titulo {
-    font-size: 2rem;
-  }
-  .descripcion-section {
-    padding: 1.5rem;
-
-    line-height: 1.8;
-    font-size: 0.8rem;
-  }
-  .main-slider {
-    height: 400px;
-  }
-
-  .mini-slide {
-    flex: 0 0 calc(50% - 5px);
-  }
-
-  .habitaciones-grid {
-    grid-template-columns: 1fr;
-  }
-  .libro-inner {
-    width: 90%;
-    height: 50vh;
-  }
-
-  .restaurante-titulo {
-    font-size: 2.8rem;
-  }
-
-  .restaurante-subtitulo {
-    font-size: 1.5rem;
-  }
-
-  .botones-container {
-    flex-direction: column;
-  }
-
-  .pagina:nth-child(1) {
-    transform: rotateY(-20deg) translateX(-10px);
-  }
-
-  .pagina:nth-child(5) {
-    transform: rotateY(20deg) translateX(10px);
-  }
-}
 
 @media (max-width: 576px) {
-  .main-slider {
-    height: 300px;
-  }
-
-  .mini-slide {
-    flex: 0 0 100%;
-    height: 80px;
-  }
-  .restaurante-titulo {
-    font-size: 2.2rem;
-  }
-
-  .restaurante-subtitulo {
-    font-size: 1.2rem;
-  }
-
-  .libro-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
-  }
-
-  .info-btn {
-    padding: 12px 20px;
-    font-size: 1rem;
-  }
 }
 /*-----------------------------------*\
  * #MEDIA QUERIES
@@ -4643,9 +4142,472 @@ address {
     width: 35px;
     height: 35px;
   }
+  .pr-title {
+    font-size: 2.5rem;
+  }
+
+  .pr-slide {
+    height: 40vh;
+    min-height: 350px;
+  }
+
+  .pr-slide-overlay {
+    padding: 1.5rem;
+  }
+
+  .pr-slide-title {
+    font-size: 2rem;
+  }
+
+  .pr-slide-desc {
+    font-size: 1rem;
+  }
+
+  .splide__arrow {
+    width: 45px;
+    height: 45px;
+  }
+
+  .pr-plan-price {
+    font-size: 2rem;
+  }
+
+  .pr-reserve-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  .romantic-dinner-menu {
+    padding: 20px;
+  }
+
+  .romantic-title {
+    font-size: 1.5rem;
+  }
+
+  .pr-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .restaurante {
+    padding: 60px 0;
+  }
+
+  .restaurante .section-title {
+    font-size: 2rem;
+  }
+
+  .restaurante .restaurante-titulo {
+    font-size: 2.5rem;
+  }
+
+  .restaurante .restaurante-info {
+    padding: 30px;
+  }
+
+  .restaurante .slider-item {
+    height: 400px;
+  }
+
+  .restaurante .botones-container {
+    flex-direction: column;
+  }
+
+  .restaurante .info-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .salones {
+    padding: 70px 0;
+  }
+
+  .section-header {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 60px;
+  }
+
+  .section-header::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .section-text {
+    margin: 0 auto;
+  }
+
+  .diagonal-line {
+    width: 100%;
+    clip-path: none;
+    opacity: 0.05;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+  }
+  .salon-titulo {
+    font-size: 2.2rem;
+  }
+
+  .botones-container {
+    flex-direction: column;
+  }
+
+  .info-btn {
+    width: 100%;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+  .romantic-slide {
+    flex-direction: column;
+  }
+
+  .romantic-slide-image {
+    min-height: 250px;
+  }
+
+  .romantic-slide-content {
+    padding: 25px;
+  }
+
+  .romantic-slide-title {
+    font-size: 2rem;
+  }
+
+  .romantic-slider-controls {
+    position: static;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  .romantic-slide-actions {
+    margin-bottom: 30px;
+  }
+  .habitacion-titulo {
+    font-size: 2rem;
+  }
+  .descripcion-section {
+    padding: 1.5rem;
+
+    line-height: 1.8;
+    font-size: 0.8rem;
+  }
+  .main-slider {
+    height: 400px;
+  }
+
+  .mini-slide {
+    flex: 0 0 calc(50% - 5px);
+  }
+
+  .habitaciones-grid {
+    grid-template-columns: 1fr;
+  }
+  .libro-inner {
+    width: 90%;
+    height: 50vh;
+  }
+
+  .restaurante-titulo {
+    font-size: 2.8rem;
+  }
+
+  .restaurante-subtitulo {
+    font-size: 1.5rem;
+  }
+
+  .botones-container {
+    flex-direction: column;
+  }
+
+  .pagina:nth-child(1) {
+    transform: rotateY(-20deg) translateX(-10px);
+  }
+
+  .pagina:nth-child(5) {
+    transform: rotateY(20deg) translateX(10px);
+  }
+}
+
+@media (max-width: 992px) {
+  .pr-title {
+    font-size: 3rem;
+  }
+
+  .pr-slide {
+    height: 50vh;
+    min-height: 400px;
+  }
+
+  .pr-slide-title {
+    font-size: 2.5rem;
+  }
+
+  .pr-plan-card {
+    padding: 2rem;
+  }
+  .restaurante .restaurante-container {
+    flex-direction: column;
+  }
+
+  .restaurante .restaurante-slider,
+  .restaurante .restaurante-info {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .restaurante .section-title {
+    font-size: 2.5rem;
+  }
+
+  .restaurante .restaurante-titulo {
+    font-size: 3rem;
+  }
+  .salones-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .salon-card {
+    margin-top: 0 !important;
+    margin-bottom: 30px;
+  }
+
+  .diagonal-line {
+    width: 80%;
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .mini-slide {
+    flex: 0 0 calc(33.333% - 7px);
+  }
 }
 @media (max-width: 1024px) {
   .header-top {
     margin-top: 0px;
+  }
+  .gourmet-service-grid {
+    display: block;
+  }
+
+  .gourmet-service-1,
+  .gourmet-service-2,
+  .gourmet-service-3,
+  .gourmet-service-4,
+  .gourmet-service-5 {
+    margin: 0 0 40px 0 !important;
+    display: block;
+  }
+
+  .gourmet-slider,
+  .gourmet-content {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    order: initial !important;
+  }
+
+  .gourmet-slide {
+    height: 300px !important;
+  }
+}
+/* Responsive */
+@media (max-width: 1200px) {
+  .pr-slide {
+    height: 60vh;
+    min-height: 500px;
+  }
+  .imagenes-container {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .slider-principal,
+  .mini-slider-vertical {
+    width: 100%;
+  }
+
+  .mini-slider-vertical {
+    flex-direction: row;
+    max-height: none;
+    overflow-x: auto;
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+
+  .mini-slide {
+    flex: 0 0 150px;
+    height: 100px;
+  }
+
+  .slider-grande {
+    height: 400px;
+  }
+
+  .info-container {
+    padding: 0 30px 30px 30px;
+  }
+  .restaurante-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .libro-slider,
+  .restaurante-info {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+  }
+
+  .libro-inner {
+    height: 60vh;
+  }
+
+  .restaurante-titulo {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .pr-container {
+    padding: 1.5rem;
+  }
+
+  .pr-title {
+    font-size: 2rem;
+  }
+
+  .pr-slide {
+    height: 35vh;
+    min-height: 300px;
+    border-radius: 15px;
+  }
+
+  .pr-slide-title {
+    font-size: 1.5rem;
+  }
+
+  .pr-plan-card {
+    padding: 1.5rem;
+    margin-top: -50px;
+  }
+
+  .pr-plan-price {
+    font-size: 1.8rem;
+  }
+
+  .pr-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .splide__arrows {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .splide__pagination {
+    bottom: 1.5rem;
+  }
+  .restaurante .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .restaurante .section-title {
+    font-size: 1.8rem;
+  }
+
+  .restaurante .section-text {
+    font-size: 1rem;
+  }
+
+  .restaurante .restaurante-titulo {
+    font-size: 2rem;
+  }
+
+  .restaurante .restaurante-subtitulo {
+    font-size: 1.2rem;
+  }
+
+  .restaurante .slider-item {
+    height: 300px;
+  }
+
+  .restaurante .slider-caption {
+    padding: 20px;
+  }
+
+  .restaurante .slider-caption h3 {
+    font-size: 1.2rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .salon-card {
+    height: auto;
+  }
+
+  .salon-overlay {
+    position: relative;
+    left: 0;
+    background: var(--dark-blue);
+    display: none;
+  }
+
+  .salon-card:hover .salon-overlay {
+    display: flex;
+  }
+  .slider-grande {
+    height: 300px;
+  }
+
+  .mini-slide {
+    flex: 0 0 120px;
+    height: 80px;
+  }
+
+  .salon-titulo {
+    font-size: 1.8rem;
+  }
+
+  .imagenes-container,
+  .info-container {
+    padding: 20px;
+  }
+
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  .main-slider {
+    height: 300px;
+  }
+
+  .mini-slide {
+    flex: 0 0 100%;
+    height: 80px;
+  }
+  .restaurante-titulo {
+    font-size: 2.2rem;
+  }
+
+  .restaurante-subtitulo {
+    font-size: 1.2rem;
+  }
+
+  .libro-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .info-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
   }
 }
