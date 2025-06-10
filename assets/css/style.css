@@ -2717,7 +2717,7 @@ address {
 .salones-grid .salon-info {
   padding: 5px;
   position: relative;
-  height: 200px;
+  height: -10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3719,7 +3719,7 @@ address {
     text-align: center;
   }
   .container {
-    max-width: 800px;
+    max-width: 90%;
   }
 
   .section-text {
@@ -4153,14 +4153,15 @@ address {
 
   .pr-slide-overlay {
     padding: 1.5rem;
+    top: 10%;
   }
 
   .pr-slide-title {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .pr-slide-desc {
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
 
   .splide__arrow {
@@ -4334,8 +4335,11 @@ address {
 }
 
 @media (max-width: 992px) {
+  .restaurante #section-title {
+    font-size: 1.5rem;
+  }
   .pr-title {
-    font-size: 3rem;
+    font-size: 1.7rem;
   }
 
   .pr-slide {
@@ -4473,6 +4477,9 @@ address {
 }
 
 @media (max-width: 576px) {
+  .salon-overlay {
+    color: var(--black-coral);
+  }
   .pr-container {
     padding: 1.5rem;
   }
@@ -4556,6 +4563,7 @@ address {
     left: 0;
     background: var(--dark-blue);
     display: none;
+    justify-content: flex-start;
   }
 
   .salon-card:hover .salon-overlay {
@@ -4613,6 +4621,9 @@ address {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .footer .container {
-    display: none;
+    display: flex;
+  }
+  .salon-overlay {
+    color: var(--white);
   }
 }
