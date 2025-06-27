@@ -1,4 +1,4 @@
-/**********carrusel********* */
+/********** Carrusel **********/
 let nextDom = document.getElementById("next");
 let prevDom = document.getElementById("prev");
 
@@ -7,11 +7,11 @@ let SliderDom = carouselDom.querySelector(".carousel .list");
 let thumbnailBorderDom = document.querySelector(".carousel .thumbnail");
 let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll(".item");
 
+// Mover la primera miniatura al final al cargar
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 
 let timeRunning = 1000;
 let timeAutoNext = 7000;
-
 let runNextAuto;
 let isMoving = false;
 
@@ -21,14 +21,17 @@ let thumbnails = document.querySelectorAll(".carousel .thumbnail .item");
 let currentIndex = 0;
 
 let startX = 0;
+let startY = 0;
 let isDragging = false;
 
+// Función para mostrar siguiente o anterior slide
 function showSlider(type) {
   if (isMoving) return;
   isMoving = true;
 
-  SliderItemsDom = SliderDom.querySelectorAll(".carousel .list .item"); // Refrescamos
-  thumbnails = document.querySelectorAll(".carousel .thumbnail .item"); // Refrescamos
+  // Refrescar nodos actuales
+  SliderItemsDom = SliderDom.querySelectorAll(".carousel .list .item");
+  thumbnails = document.querySelectorAll(".carousel .thumbnail .item");
 
   if (type === "next") {
     SliderDom.appendChild(SliderItemsDom[0]);
@@ -55,6 +58,7 @@ function showSlider(type) {
   resetAutoNext();
 }
 
+// Reiniciar el tiempo del slider automático
 function resetAutoNext() {
   clearTimeout(runNextAuto);
   runNextAuto = setTimeout(() => {
@@ -62,6 +66,7 @@ function resetAutoNext() {
   }, timeAutoNext);
 }
 
+// Botones de siguiente y anterior
 nextDom.onclick = function () {
   showSlider("next");
 };
@@ -70,46 +75,64 @@ prevDom.onclick = function () {
   showSlider("prev");
 };
 
-// --- Arrastrar para mover ---
-// Para dispositivos de escritorio y móviles
+// --- Arrastrar y deslizar para mover ---
+// Función al iniciar toque/click
 function onMouseDown(event) {
   isDragging = true;
   startX = event.clientX || event.touches[0].clientX;
+  startY = event.clientY || event.touches[0].clientY;
   carouselDom.style.cursor = "grabbing";
-  event.preventDefault(); // Evitar el comportamiento predeterminado
-}
 
-function onMouseMove(event) {
-  if (!isDragging) return;
-
-  const moveX = (event.clientX || event.touches[0].clientX) - startX;
-  if (Math.abs(moveX) > 100) {
-    // Si se movió lo suficiente, cambiamos la imagen
-    if (moveX > 0) {
-      showSlider("prev");
-    } else {
-      showSlider("next");
-    }
-    isDragging = false; // Detener el arrastre
+  // Solo prevenir en desktop
+  if (event.type === "mousedown") {
+    event.preventDefault();
   }
 }
 
-function onMouseUp(event) {
+// Función al mover
+function onMouseMove(event) {
+  if (!isDragging) return;
+
+  const currentX = event.clientX || event.touches[0].clientX;
+  const currentY = event.clientY || event.touches[0].clientY;
+
+  const moveX = currentX - startX;
+  const moveY = currentY - startY;
+
+  // Solo cambiar slide si se mueve más en X que en Y
+  if (Math.abs(moveX) > Math.abs(moveY)) {
+    if (Math.abs(moveX) > 80) {
+      if (moveX > 0) {
+        showSlider("prev");
+      } else {
+        showSlider("next");
+      }
+      isDragging = false;
+    }
+
+    // Bloquear scroll vertical solo si mueve en horizontal
+    if (event.cancelable) event.preventDefault();
+  }
+}
+
+// Función al soltar click o dedo
+function onMouseUp() {
   isDragging = false;
   carouselDom.style.cursor = "grab";
 }
 
+// Eventos para escritorio
 carouselDom.addEventListener("mousedown", onMouseDown);
 carouselDom.addEventListener("mousemove", onMouseMove);
 carouselDom.addEventListener("mouseup", onMouseUp);
 carouselDom.addEventListener("mouseleave", () => {
   isDragging = false;
-}); // Si el mouse sale del carrusel
+});
 
-// Para dispositivos táctiles
+// Eventos para móviles
 carouselDom.addEventListener("touchstart", onMouseDown);
 carouselDom.addEventListener("touchmove", onMouseMove);
 carouselDom.addEventListener("touchend", onMouseUp);
 
-// Iniciar el slider auto
+// Iniciar slider automático
 resetAutoNext();

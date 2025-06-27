@@ -411,7 +411,10 @@ body {
   opacity: 0.7;
   pointer-events: all;
 }
-
+#logo-footer img {
+  display: block;
+  margin: 0 auto;
+}
 /*-----------------------------------*\
  * #carrussel
 \*-----------------------------------*/
@@ -3861,6 +3864,18 @@ address {
     flex: 1 1 400px;
     text-align: center;
   }*/
+  .go-top,
+  .social-flare-container {
+    width: 60px;
+    height: 60px;
+    display: flex;
+  }
+
+  .go-top ion-icon,
+  .social-flare-container ion-icon,
+  .social-icon ion-icon {
+    font-size: 36px;
+  }
   .header-top {
     max-width: 100%;
   }
@@ -3915,7 +3930,6 @@ address {
 
   .navbar-link {
     color: var(--white);
-    font-size: 20px;
     font-weight: unset;
     text-transform: uppercase;
   }
@@ -4029,6 +4043,10 @@ address {
   /**
    * CUSTOM PROPERTY
    */
+
+  .navbar-link {
+    font-size: 20px;
+  }
 
   :root {
     /**
@@ -4335,6 +4353,11 @@ address {
 }
 
 @media (max-width: 992px) {
+  .header .btn {
+    order: -1;
+    position: relative;
+    left: -10px;
+  }
   .restaurante #section-title {
     font-size: 1.5rem;
   }
@@ -4474,9 +4497,25 @@ address {
   .restaurante-titulo {
     font-size: 3.4rem;
   }
+  .header .btn {
+    display: none;
+  }
 }
 
 @media (max-width: 576px) {
+  .cta :is(.section-subtitle, .section-text) {
+    display: none;
+  }
+  #contact-button {
+    display: block;
+    margin: 0 auto;
+  }
+  .menu-info .section-subtitle {
+    font-size: 0.7rem;
+  }
+  .menu-info .section-text {
+    font-size: 0.8rem;
+  }
   .salon-overlay {
     color: var(--black-coral);
   }
